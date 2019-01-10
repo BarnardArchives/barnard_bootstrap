@@ -1,0 +1,79 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+$darkgrey_color: 37383a;
+
+// Frontpage Panel
+
+.frontpage-panel {
+	background: #99ccff;
+	width: 425px;
+	padding: 10px 15px;
+	border-radius: 10px;
+	opacity: 0.9;
+	position: relative;
+	// left: 5em;
+	text-align: center;
+	font-size: 135%;
+	font-weight: bold;
+	color: white;
+	line-height: 1.4em;
+	h1 {
+		letter-spacing: 0.5pt;
+		margin: 0.25em 0;
+	}
+	p {
+		max-width: 75%;
+		margin: 0 auto 1em;
+	}
+	ul.links {		
+		margin: 0;
+		padding: 0.5em 1.25em 1em; 
+		li {
+			display: inline;
+			padding: 0 0.25em;
+		}
+	}
+	#frontpage-menu-mobile {
+		display: none;
+	}
+	#about-mobile {
+		display: none;
+	}
+}
+
+// Frontpage Featured
+
+#block-views-featured-block {
+	background: white;
+	max-width: 300px;
+	float: right;
+	padding: 10px 15px;
+	position: absolute;
+  // top: -82px; right: 62px;
+  top: -100px; right: 62px;
+  border-radius: 7px;
+	opacity: 0.8;	
+	a {
+		display: inline-block;
+		line-height: 1.75em;
+		&:link, &:visited {
+			color: black;
+		}
+		&:hover, &:active {
+			color: $darkgrey_color;
+		}
+	}
+}
+
