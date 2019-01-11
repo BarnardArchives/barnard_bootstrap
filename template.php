@@ -4,10 +4,21 @@
  * The primary PHP file for this theme.
  */
 
+function barnard_bootstrap_form_islandora_solr_simple_search_form_alter(&$form, &$form_state) {
+  // Control form size attrib with CSS width.
+  unset($form['simple']['islandora_simple_search_query']['#size']);
+  // Add placeholder text.
+  $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = "Search by name, keyword, etc.";
+}
+
+
+// ->>> Old Below:
+
+
 /**
  * Implements hook_preprocess_islandora_basic_collection_wrapper().
  */
-function bootstrap_preprocess_islandora_basic_collection_wrapper(&$vars) {
+function barnard_bootstrap_preprocess_islandora_basic_collection_wrapper(&$vars) {
   $object = $vars['islandora_object'];
 
   if (isset($object['MODS']) && $mods = simplexml_load_string($object['MODS']->getContent(NULL))) {

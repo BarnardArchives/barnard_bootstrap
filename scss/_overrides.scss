@@ -4,6 +4,13 @@ $normal:              "screen and (min-width: #{$screen-md-min})";
 $wide:                "screen and (min-width: #{$screen-lg-min})";
 $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
 
+$btn-primary: #f1bdbb;
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: $btn-primary;
+    border-color: $btn-primary;
+}
+
 // Drop shadows.
 @mixin box-shadow($shadow) {
   -webkit-box-shadow: $shadow;

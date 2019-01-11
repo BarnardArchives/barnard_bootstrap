@@ -10,18 +10,18 @@
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
 .frontpage-panel {
-  margin-top: 60px;
-  padding: 10px 15px;
   background: #363644;
-  opacity: 0.9;
-  border-radius: 0px;
+  opacity: 0.85;
+  border-radius: 2px;
   font-family: "Open Sans",Helvetica,Arial,sans-serif;
-  font-size: 135%;
-  font-weight: bold;
   color: white;
-  line-height: 1.4em; }
-  .frontpage-panel a, .frontpage-panel a:hover, .frontpage-panel a:active {
+  line-height: 1.4em;
+  margin-top: 60px;
+  padding: 10px 15px; }
+  .frontpage-panel a:link, .frontpage-panel a:visited {
     color: #f1bdbb; }
+  .frontpage-panel a:hover, .frontpage-panel a:active {
+    color: white; }
   .frontpage-panel h1 {
     letter-spacing: 0.5pt;
     margin: 0.5em 0;
@@ -36,28 +36,36 @@
     .frontpage-panel ul.links li {
       display: inline;
       padding: 0 0.25em; }
+  .frontpage-panel .form-type-textfield {
+    max-width: 82%;
+    margin-left: 5px; }
+  .frontpage-panel .btn {
+    border-radius: unset; }
   .frontpage-panel #frontpage-menu-mobile {
     display: none; }
   .frontpage-panel #about-mobile {
     display: none; }
 
+.front-footer {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0; }
+
 #block-views-featured-block {
-  background: white;
+  background: #363644;
+  opacity: 0.85;
+  border-radius: 2px;
   max-width: 300px;
   float: right;
-  padding: 10px 15px;
-  position: absolute;
-  top: -100px;
-  right: 62px;
-  border-radius: 7px;
-  opacity: 0.8; }
+  padding: 10px 15px; }
   #block-views-featured-block a {
     display: inline-block;
     line-height: 1.75em; }
     #block-views-featured-block a:link, #block-views-featured-block a:visited {
-      color: black; }
+      color: #f1bdbb; }
     #block-views-featured-block a:hover, #block-views-featured-block a:active {
-      color: #37383a; }
+      color: white; }
 
 /*!
  * Bootstrap v3.4.0 (https://getbootstrap.com/)
@@ -5855,6 +5863,10 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #f1bdbb;
+  border-color: #f1bdbb; }
+
 html.overlay-open .navbar-fixed-top {
   z-index: 400; }
 html.js fieldset.collapsed {
