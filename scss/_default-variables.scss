@@ -12,26 +12,36 @@
 
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
-$darkgrey_color: 37383a;
+$darkgrey_color: #37383a;
+$frontpage-panel-bg: #363644;
+$frontpage-link-color: #f1bdbb;
+$frontpage-link-color-visited: black;
+$frontpage-header-color: #f8f5e7;
 
 // Frontpage Panel
 
 .frontpage-panel {
-	background: #99ccff;
-	width: 425px;
+	margin-top: 60px;
 	padding: 10px 15px;
-	border-radius: 10px;
+	background: $frontpage-panel-bg;
 	opacity: 0.9;
-	position: relative;
+	border-radius: 0px;
+	// position: relative;
 	// left: 5em;
-	text-align: center;
+	// text-align: center;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
 	font-size: 135%;
 	font-weight: bold;
 	color: white;
 	line-height: 1.4em;
+	a, a:hover, a:active {
+		color: $frontpage-link-color;
+	}
 	h1 {
 		letter-spacing: 0.5pt;
-		margin: 0.25em 0;
+		margin: 0.5em 0;
+		color: $frontpage-header-color;
+		font-family: Georgia,"Times New Roman",Times,serif;
 	}
 	p {
 		max-width: 75%;
