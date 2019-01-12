@@ -4,11 +4,21 @@ $normal:              "screen and (min-width: #{$screen-md-min})";
 $wide:                "screen and (min-width: #{$screen-lg-min})";
 $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
 
+// Barnard Custom Overrides
 $btn-primary: #f1bdbb;
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.main-container a {
+  text-decoration: underline;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
     background-color: $btn-primary;
-    border-color: $btn-primary;
+    border-color: darken($btn-primary, 5%);
+}
+
+.btn-info, .btn-info:hover, .btn-info:active, .btn-info:visited, .btn-info:focus {
+  background-color: $btn-primary;
+  border-color: darken($btn-primary, 5%);
 }
 
 // Drop shadows.

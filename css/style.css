@@ -5863,9 +5863,16 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.main-container a {
+  text-decoration: underline; }
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
   background-color: #f1bdbb;
-  border-color: #f1bdbb; }
+  border-color: #eda8a6; }
+
+.btn-info, .btn-info:hover, .btn-info:active, .btn-info:visited, .btn-info:focus {
+  background-color: #f1bdbb;
+  border-color: #eda8a6; }
 
 html.overlay-open .navbar-fixed-top {
   z-index: 400; }
