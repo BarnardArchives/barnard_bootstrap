@@ -9,6 +9,9 @@
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
+.breadcrumb a {
+  text-decoration: none !important; }
+
 .frontpage-panel {
   background: #363644;
   opacity: 0.85;
@@ -6537,7 +6540,48 @@ a.icon-after .glyphicon {
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
 /*# sourceMappingURL=_islandora.scss.map */
+.collection-description {
+  background-color: #363644; }
+  .collection-description a:link, .collection-description a:visited {
+    color: #f1bdbb; }
+  .collection-description a:hover, .collection-description a:active {
+    color: white; }
+  .collection-description .lp-link {
+    text-decoration: none; }
+  .collection-description h1 {
+    font-size: unset;
+    margin-top: 8.9em;
+    margin-bottom: 0; }
+
 .permalink {
-  color: blue; }
+  clear: left;
+  margin-top: 25px; }
+  .permalink .permalink-wrapper {
+    display: inline; }
+  .permalink .permalink-input {
+    margin-right: 3px; }
+  .permalink label {
+    display: inline;
+    margin-right: 10px; }
+
+#manuscript-viewer {
+  width: 100%;
+  display: table;
+  margin-bottom: 10px; }
+  #manuscript-viewer #manuscript-viewer-transcript-pane {
+    float: left;
+    overflow: scroll;
+    margin-right: 20px;
+    max-height: 500px;
+    font-size: 12px; }
+    #manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page {
+      display: none; }
+      #manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page .active {
+        display: block; }
+      #manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page pre {
+        font-size: 1.4em; }
+  #manuscript-viewer #manuscript-viewer-osd-pane {
+    float: left;
+    width: 90%; }
 
 /*# sourceMappingURL=style.css.map */

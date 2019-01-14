@@ -12,6 +12,70 @@
 
 /*# sourceMappingURL=_islandora.scss.map */
 
+$collections-collection-panel: #363644;
+$colletions-link-color: #f1bdbb;
+$colletions-link-hover-color: white;
+
+// Collections page
+.collection-description {
+	background-color: $collections-collection-panel;
+	a {
+		&:link, &:visited {
+			color: $colletions-link-color;
+		}
+		&:hover, &:active {
+			color: $colletions-link-hover-color;
+		}
+	}
+	.lp-link {
+		text-decoration: none;
+	}
+	h1 {
+		// font-size: unset;
+		margin-top: 8.9em;
+		margin-bottom: 0;
+	}
+}
+
+// Permalink
 .permalink {
-	color: blue;
+	clear: left;
+	margin-top: 25px;
+	.permalink-wrapper {
+		display: inline;
+	}
+	.permalink-input {
+		margin-right: 3px;
+	}
+	label {
+		display: inline;
+		margin-right: 10px;
+	}
+}
+
+// Manuscript
+#manuscript-viewer {
+	width: 100%;
+	display: table;
+	margin-bottom: 10px;
+	#manuscript-viewer-transcript-pane {
+		float: left;
+		overflow: scroll;
+		margin-right: 20px;
+  		max-height: 500px;
+  		font-size: 12px;
+  		.manuscript-transcript-page {
+  			display: none;
+  			.active {
+  				display: block;
+  			}
+  			pre {
+  				font-size: 1.4em;
+  			}
+  		}
+	}
+	#manuscript-viewer-osd-pane {
+		float: left;
+		width: 90%;
+	}
 }

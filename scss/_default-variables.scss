@@ -19,6 +19,11 @@ $front-pg-link-hover-color: white;
 $front-pg-opacity: 0.85;
 $front-pg-border-radius: 2px;
 
+// Breadcrumbs
+.breadcrumb a {
+	text-decoration: none !important;
+}
+
 // Frontpage Panel
 .frontpage-panel {
 	background: $front-pg-panel-bg;
@@ -67,10 +72,6 @@ $front-pg-border-radius: 2px;
 	.btn {
 		border-radius: unset;
 	}
-	// .btn-primary {
-	// 	background-color: $front-pg-link-color;
-	// 	border-color: $front-pg-link-color;
-	// }
 	#frontpage-menu-mobile {
 		display: none;
 	}
