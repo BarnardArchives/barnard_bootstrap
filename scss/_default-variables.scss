@@ -10,6 +10,36 @@
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
 
+// these belongs in islandora.scss
+
+#block-islandora-solr-display-switch {
+	// width: 15%;
+	float: right;
+	& li {
+		display: inline-block;
+	}
+	& ul {
+		list-style: none outside none;
+		margin-bottom: 0;
+  }
+}
+
+#block-islandora-solr-sort {
+	// width: 15%;
+	float: right;
+	& li {
+		display: inline-block;
+	}
+	& ul {
+		list-style: none outside none;
+		margin-bottom: 0;
+	}
+	.img-responsive {
+		display: inline-block;
+	}
+}
+
+
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
 $front-pg-panel-bg: #363644;
@@ -82,10 +112,10 @@ $front-pg-border-radius: 2px;
 
 // Frontpage footer
 .front-footer {
-    position: fixed;
-    bottom: 50px;
-    left: 0;
-    right: 0;
+	position: fixed;
+	bottom: 50px;
+	left: 0;
+	right: 0;
 }
 
 // Frontpage Featured

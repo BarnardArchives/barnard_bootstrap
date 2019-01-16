@@ -14,15 +14,14 @@ function barnard_bootstrap_form_islandora_solr_simple_search_form_alter(&$form, 
   $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = "Search by name, keyword, etc.";
 }
 
-// Don't know if we'll use these hooks but hey, why not?
 /**
  * Implements hook_block_view_MODULE_DELTA_alter().
  */
 function barnard_bootstrap_block_view_islandora_solr_display_switch_alter(&$data, $block) {
-  // kpr($block);
-  // kpr($data);
+  $findArray = array('display-bcislandora-list', 'display-grid', 'A simple output.', 'List', 'Grid');
+  $replaceArray = array('glyphicon glyphicon-th-list display-bcislandora-list', 'glyphicon glyphicon-th-large display-grid', 'Display search results as a list view', '', '');
+  $data = str_replace($findArray, $replaceArray, $data);
 }
-
 
 /**
  * Implements hook_block_view_MODULE_DELTA_alter().

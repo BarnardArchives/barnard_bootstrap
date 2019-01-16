@@ -10,15 +10,77 @@
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
 
-/*# sourceMappingURL=_islandora.scss.map */
 
 $collections-collection-panel: #363644;
 $colletions-link-color: #f1bdbb;
 $colletions-link-hover-color: white;
 
+
+.breadcrumb a {
+  text-decoration: none !important; }
+
+.frontpage-panel {
+  background: #363644;
+  opacity: 0.85;
+  border-radius: 2px;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  color: white;
+  line-height: 1.4em;
+  margin-top: 60px;
+  padding: 10px 15px; }
+  .frontpage-panel a:link, .frontpage-panel a:visited {
+    color: #f1bdbb; }
+  .frontpage-panel a:hover, .frontpage-panel a:active {
+    color: white; }
+  .frontpage-panel h1 {
+    letter-spacing: 0.5pt;
+    margin: 0.5em 0;
+    color: #f8f5e7;
+    font-family: Georgia,"Times New Roman",Times,serif; }
+  .frontpage-panel p {
+    max-width: 75%;
+    margin: 0 auto 1em; }
+  .frontpage-panel ul.links {
+    margin: 0;
+    padding: 0.5em 1.25em 1em; }
+    .frontpage-panel ul.links li {
+      display: inline;
+      padding: 0 0.25em; }
+  .frontpage-panel .form-type-textfield {
+    max-width: 82%;
+    margin-left: 5px; }
+  .frontpage-panel .btn {
+    border-radius: unset; }
+  .frontpage-panel #frontpage-menu-mobile {
+    display: none; }
+  .frontpage-panel #about-mobile {
+    display: none; }
+
+.front-footer {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0; }
+
+#block-views-featured-block {
+  background: #363644;
+  opacity: 0.85;
+  border-radius: 2px;
+  max-width: 300px;
+  float: right;
+  padding: 10px 15px; }
+  #block-views-featured-block a {
+    display: inline-block;
+    line-height: 1.75em; }
+    #block-views-featured-block a:link, #block-views-featured-block a:visited {
+      color: #f1bdbb; }
+    #block-views-featured-block a:hover, #block-views-featured-block a:active {
+      color: white; }
+
 // Collections page
 .collection-description {
 	background-color: $collections-collection-panel;
+	text-align: left;
 	a {
 		&:link, &:visited {
 			color: $colletions-link-color;
@@ -30,11 +92,18 @@ $colletions-link-hover-color: white;
 	.lp-link {
 		text-decoration: none;
 	}
+	
 	h1 {
 		// font-size: unset;
 		margin-top: 8.9em;
 		margin-bottom: 0;
 	}
+}
+
+// Collections landingpage		
+.landingpage#collections {
+    text-align: left;
+    margin: 0;
 }
 
 // Permalink
@@ -79,3 +148,7 @@ $colletions-link-hover-color: white;
 		width: 90%;
 	}
 }
+
+
+
+/*# sourceMappingURL=_islandora.scss.map */
