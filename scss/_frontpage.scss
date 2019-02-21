@@ -1,0 +1,92 @@
+// Set the proper directory for the Bootstrap Glyphicon font.
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+$front-pg-panel-bg: #363644;
+$front-pg-text-color: #F5F2E5;
+$front-pg-link-color: #F1BDBB; 
+$front-pg-link-hover-color: #D9ABA9;
+$front-pg-opacity: 0.85;
+$front-pg-border-radius: 4px;
+
+// Frontpage Panel
+.frontpage-panel {
+  width: 46.5% !important; // Override column-*-6 by -3.5% ;)
+  background: $front-pg-panel-bg;
+  opacity: $front-pg-opacity;
+  border-radius: $front-pg-border-radius;
+  font-family: $font-family-sans-serif;
+  color: $front-pg-text-color;
+  line-height: 1.4em;
+  margin-top: 60px;
+  padding: 25px 25px !important;
+  a {
+    margin: 0;
+    &:link, &:visited {
+      color: $front-pg-link-color;
+    }
+    &:hover, &:active {
+      color: $front-pg-link-hover-color;
+    }
+  }
+  h1 {
+    margin: 0;
+    // letter-spacing: 0.5pt;
+    font-family: $font-family-serif;
+  }
+  p {
+    margin: 0;
+  }
+  ul.links {
+    padding: 0;
+    margin-bottom: 0;
+    li {
+      display: inline;
+    }
+  }
+  .form-type-textfield {
+    max-width: 83.5%; // Yea.
+    margin-right: 5px;
+  }
+  .btn, .btn:active, .btn:visited, {
+    padding: 6px 12px;
+  }
+
+  .btn:hover, .btn:focus {
+    padding: 6px 12px;
+  }
+  #about-main, #frontpage-menu-mobile, #about-mobile, #edit-simple {
+    padding: 0;
+    margin-top: 20px;
+  }
+  #frontpage-menu-mobile, #about-mobile {
+    display: none;
+  }
+}
+
+// Frontpage footer
+.front-footer {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+// Frontpage Featured
+#block-views-featured-block {
+  background: $front-pg-panel-bg;
+  opacity: $front-pg-opacity;
+  border-radius: $front-pg-border-radius;
+  max-width: 300px;
+  float: right;
+  padding: 10px 15px;
+  color: $front-pg-text-color;
+  a {
+    display: inline-block;
+    line-height: 1.75em;
+    &:link, &:visited {
+      color: $front-pg-link-color;
+    }
+    &:hover, &:active {
+      color: $front-pg-link-hover-color;
+    }
+  }
+}

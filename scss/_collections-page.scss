@@ -1,0 +1,98 @@
+$collections-collection-panel: #363644;
+$colletions-link-color: #f1bdbb;
+$colletions-link-hover-color: white;
+
+.panel-body {
+  padding: 0;
+}
+
+.panel-footer.collections {
+  background-color: $collections-collection-panel;
+  a {
+    &:link, &:visited {
+      color: $colletions-link-color;
+    }
+    &:hover, &:active {
+      color: $colletions-link-hover-color;
+    }
+  }
+  .lp-link {
+    text-decoration: none;
+  }
+}
+
+.collection-description {
+  background-color: $collections-collection-panel;
+  text-align: left;
+  a {
+    &:link, &:visited {
+      color: $colletions-link-color;
+    }
+    &:hover, &:active {
+      color: $colletions-link-hover-color;
+    }
+  }
+  .lp-link {
+    text-decoration: none;
+  }
+  h1 {
+    // font-size: unset;
+    margin-top: 8.9em;
+    margin-bottom: 0;
+  }
+}
+
+.landingpage#collections {
+  text-align: left;
+  margin: 0;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.landingpage-link {
+  width: 200px;
+}
+
+.landingpage-icon {
+  display: inline-block;
+  width: 220px;
+  background-size: 225px 225px !important;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  // text-align: center;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+  }
+  a.lp-link {
+   display: block;
+    font-size: 0.95em;
+    padding: 0 2px 1px 2px;
+  }
+  h1 {
+    font-size: 1.26em;
+    margin-top: 8.9em;
+    margin-bottom: 0;
+  }
+  &#photograph-collection {
+    background: url(/sites/all/modules/bc_islandora/img/photographs.jpg) no-repeat top left;
+  }
+  &#newspaper-collection {
+    background: url(/sites/all/modules/bc_islandora/img/bulletin.jpg) no-repeat; 
+  }
+  &#yearbook-collection {
+    background: url(/sites/all/modules/bc_islandora/img/mortarboard.jpg) no-repeat; 
+  }
+  &#student-publication-collection {
+    background: url(/sites/all/modules/bc_islandora/img/studentpublications.jpg) no-repeat; 
+  }
+  &#barnard-center-for-research-on-women-collection {
+    background: url(/sites/all/modules/bc_islandora/img/bcrw.jpg) no-repeat; 
+  }
+  &#scrapbook-collection {
+    background: url(/sites/all/modules/bc_islandora/img/scrapbooks.jpg) no-repeat; 
+  }
+  &#barnard-magazine-collection {
+    background: url(/sites/all/modules/bc_islandora/img/barnardmagazine.jpg) no-repeat; 
+  }
+}

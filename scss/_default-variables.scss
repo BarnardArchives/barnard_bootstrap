@@ -9,132 +9,18 @@
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
+$brand-primary: #333333;
+$link-color: #3D3D66;
+$link-hover-color: #54548C;
 
-// these belongs in islandora.scss
+$font-family-sans-serif:  Arial, sans-serif;
+// $font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
 
-#block-islandora-solr-display-switch {
-	// width: 15%;
-	float: right;
-	& li {
-		display: inline-block;
-	}
-	& ul {
-		list-style: none outside none;
-		margin-bottom: 0;
-  }
-}
-
-#block-islandora-solr-sort {
-	// width: 15%;
-	float: right;
-	& li {
-		display: inline-block;
-	}
-	& ul {
-		list-style: none outside none;
-		margin-bottom: 0;
-	}
-	.img-responsive {
-		display: inline-block;
-	}
-}
-
-
-// Set the proper directory for the Bootstrap Glyphicon font.
-$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
-$front-pg-panel-bg: #363644;
-$front-pg-h1-color: #f8f5e7;
-$front-pg-link-color: #f1bdbb;
-$front-pg-link-hover-color: white;
-$front-pg-opacity: 0.85;
-$front-pg-border-radius: 2px;
-
-// Breadcrumbs
-.breadcrumb a {
-	text-decoration: none !important;
-}
-
-// Frontpage Panel
-.frontpage-panel {
-	background: $front-pg-panel-bg;
-	opacity: $front-pg-opacity;
-	border-radius: $front-pg-border-radius;
-	font-family: "Open Sans",Helvetica,Arial,sans-serif;
-	// font-size: 135%;
-	// font-weight: bold;
-	color: white;
-	line-height: 1.4em;
-	margin-top: 60px;
-	padding: 10px 15px;
-	// position: relative;
-	// left: 5em;
-	// text-align: center;
-	a {
-		&:link, &:visited {
-			color: $front-pg-link-color;
-		}
-		&:hover, &:active {
-			color: $front-pg-link-hover-color;
-		}
-	}
-	h1 {
-		letter-spacing: 0.5pt;
-		margin: 0.5em 0;
-		color: $front-pg-h1-color;
-		font-family: Georgia,"Times New Roman",Times,serif;
-	}
-	p {
-		max-width: 75%;
-		margin: 0 auto 1em;
-	}
-	ul.links {		
-		margin: 0;
-		padding: 0.5em 1.25em 1em; 
-		li {
-			display: inline;
-			padding: 0 0.25em;
-		}
-	}
-	.form-type-textfield {
-		max-width: 82%;
-		margin-left: 5px;
-	}
-	.btn {
-		border-radius: unset;
-	}
-	#frontpage-menu-mobile {
-		display: none;
-	}
-	#about-mobile {
-		display: none;
-	}
-}
-
-// Frontpage footer
-.front-footer {
-	position: fixed;
-	bottom: 50px;
-	left: 0;
-	right: 0;
-}
-
-// Frontpage Featured
-#block-views-featured-block {
-	background: $front-pg-panel-bg;
-	opacity: $front-pg-opacity;
-	border-radius: $front-pg-border-radius;
-	max-width: 300px;
-	float: right;
-	padding: 10px 15px;
-	a {
-		display: inline-block;
-		line-height: 1.75em;
-		&:link, &:visited {
-			color: $front-pg-link-color;
-		}
-		&:hover, &:active {
-			color: $front-pg-link-hover-color;
-		}
-	}
-}
-
+$font-size-base:          16px; // 1 rem
+$font-size-h1:            floor(($font-size-base * 2.5));
+$font-size-h2:            floor(($font-size-base * 2.25));
+$font-size-h3:            ceil(($font-size-base * 2));
+$font-size-h4:            ceil(($font-size-base * 1.75));
+$font-size-h5:            ceil(($font-size-base * 1.5));
+$font-size-h6:            ceil(($font-size-base * 1.25));

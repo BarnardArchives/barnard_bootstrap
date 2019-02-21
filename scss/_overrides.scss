@@ -5,21 +5,49 @@ $wide:                "screen and (min-width: #{$screen-lg-min})";
 $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
 
 // Barnard Custom Overrides
-$btn-primary: #f1bdbb;
+$btn-bg: #F1BDBB;
+$btn-font: Arial, sans-serif;
+$btn-font-color: #333333;
+$btn-font-size: 16px;
+$btn-padding: 12px 20px;
+$btn-border: 1px solid #D9ABA9;
+$btn-hover-bg: #D9ABA9;
+$btn-hover-border: 1px solid #BF9795;
 
 .main-container a {
   text-decoration: underline;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
-    background-color: $btn-primary;
-    border-color: darken($btn-primary, 5%);
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: $btn-bg;
+    font-family: $btn-font;
+    font-size: $btn-font-size;
+    color: $btn-font-color;
+    padding: $btn-padding;
+    border: $btn-border;
 }
 
-.btn-info, .btn-info:hover, .btn-info:active, .btn-info:visited, .btn-info:focus {
-  background-color: $btn-primary;
-  border-color: darken($btn-primary, 5%);
+.btn-primary:hover, .btn-primary:focus {
+    background-color: $btn-hover-bg;
+    color: $btn-font-color;
+    border: $btn-hover-border;
 }
+
+.btn-info, .btn-info:active, .btn-info:visited {
+    background-color: $btn-bg;
+    font-family: $btn-font;
+    font-size: $btn-font-size;
+    color: $btn-font-color;
+    padding: $btn-padding;
+    border: $btn-border;
+}
+
+.btn-info:hover, .btn-info:focus {
+    background-color: $btn-hover-bg;
+    color: $btn-font-color;
+    border: $btn-hover-border;
+}
+
 
 // Drop shadows.
 @mixin box-shadow($shadow) {
@@ -295,7 +323,7 @@ fieldset .panel-heading a.panel-title {
 }
 .form-group:last-child,
 .panel:last-child {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .form-horizontal .form-group {
   margin-left: 0;

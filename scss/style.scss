@@ -4,8 +4,12 @@
 // Bootstrap Framework.
 @import '../bootstrap/assets/stylesheets/bootstrap';
 
+// Barnard custom
+@import 'nav';
+@import 'frontpage';
+@import 'collections-page';
+@import 'islandora';
+@import 'exhibits';
+
 // Base-theme overrides.
 @import 'overrides';
-
-// Islandora
-@import 'islandora';

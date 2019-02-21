@@ -4,6 +4,11 @@
  * The primary PHP file for this theme.
  */
 
+// for devel
+function barnard_bootstrap_block_view_alter(&$data, $block) {
+  // kpr($block);
+}
+
 /**
  * Implements hook_form_FORM_ID_alter().
  */
@@ -18,17 +23,27 @@ function barnard_bootstrap_form_islandora_solr_simple_search_form_alter(&$form, 
  * Implements hook_block_view_MODULE_DELTA_alter().
  */
 function barnard_bootstrap_block_view_islandora_solr_display_switch_alter(&$data, $block) {
-  $findArray = array('display-bcislandora-list', 'display-grid', 'A simple output.', 'List', 'Grid');
-  $replaceArray = array('glyphicon glyphicon-th-list display-bcislandora-list', 'glyphicon glyphicon-th-large display-grid', 'Display search results as a list view', '', '');
+  $findArray = array('display-bcislandora-list', 'display-grid', 'A simple output.', 'List', 'Grid', 'active');
+  $replaceArray = array('btn glyphicon glyphicon-th-list display-bcislandora-list', 'btn glyphicon glyphicon-th-large display-grid', 'Display search results as a list view', '', '', 'active disabled');
   $data = str_replace($findArray, $replaceArray, $data);
 }
 
 /**
- * Implements hook_block_view_MODULE_DELTA_alter().
+ * Returns HTML for an islandora_solr_facet_wrapper.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - title: A string to use as the header/title.
+ *   - content: A string containing the content being wrapped.
+ *
+ * @ingroup themeable
  */
-function barnard_bootstrap_block_view_islandora_solr_sort_alter(&$data, $block) {
-  // kpr($block);
-  // kpr($data);
+function barnard_bootstrap_islandora_solr_facet_wrapper($variables) {
+  $output = '<div class="islandora-solr-facet-wrapper">';
+  $output .= '<h3 class="facet-heading"><a class="facet-toggle collapsed" data-toggle="collapse" href="#'. $variables['pid'] . '">' . $variables['title'] . '</a></h3>';
+  $output .= '<div class="collapse" id="' . $variables['pid'] . '">' . $variables['content'] . '</div>';
+  $output .= '</div>';
+  return $output;
 }
 
 // ->>> Old Below:

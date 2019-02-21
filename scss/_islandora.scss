@@ -1,154 +1,229 @@
-/**
- * Default Variables.
- *
- * Modify this file to provide default Bootstrap Framework variables. The
- * Bootstrap Framework will not override any variables defined here because it
- * uses the `!default` flag which will only set their default if not already
- * defined here.
- *
- * You can copy existing variables directly from the following file:
- * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
- */
+$collection-facets-text-size: 24px;
+$collection-facets-glyphico-size: 14px;
 
-
-$collections-collection-panel: #363644;
-$colletions-link-color: #f1bdbb;
-$colletions-link-hover-color: white;
-
-
-.breadcrumb a {
-  text-decoration: none !important; }
-
-.frontpage-panel {
-  background: #363644;
-  opacity: 0.85;
-  border-radius: 2px;
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
-  color: white;
-  line-height: 1.4em;
-  margin-top: 60px;
-  padding: 10px 15px; }
-  .frontpage-panel a:link, .frontpage-panel a:visited {
-    color: #f1bdbb; }
-  .frontpage-panel a:hover, .frontpage-panel a:active {
-    color: white; }
-  .frontpage-panel h1 {
-    letter-spacing: 0.5pt;
-    margin: 0.5em 0;
-    color: #f8f5e7;
-    font-family: Georgia,"Times New Roman",Times,serif; }
-  .frontpage-panel p {
-    max-width: 75%;
-    margin: 0 auto 1em; }
-  .frontpage-panel ul.links {
-    margin: 0;
-    padding: 0.5em 1.25em 1em; }
-    .frontpage-panel ul.links li {
-      display: inline;
-      padding: 0 0.25em; }
-  .frontpage-panel .form-type-textfield {
-    max-width: 82%;
-    margin-left: 5px; }
-  .frontpage-panel .btn {
-    border-radius: unset; }
-  .frontpage-panel #frontpage-menu-mobile {
-    display: none; }
-  .frontpage-panel #about-mobile {
-    display: none; }
-
-.front-footer {
-  position: fixed;
-  bottom: 50px;
-  left: 0;
-  right: 0; }
-
-#block-views-featured-block {
-  background: #363644;
-  opacity: 0.85;
-  border-radius: 2px;
-  max-width: 300px;
-  float: right;
-  padding: 10px 15px; }
-  #block-views-featured-block a {
-    display: inline-block;
-    line-height: 1.75em; }
-    #block-views-featured-block a:link, #block-views-featured-block a:visited {
-      color: #f1bdbb; }
-    #block-views-featured-block a:hover, #block-views-featured-block a:active {
-      color: white; }
-
-// Collections page
-.collection-description {
-	background-color: $collections-collection-panel;
-	text-align: left;
-	a {
-		&:link, &:visited {
-			color: $colletions-link-color;
-		}
-		&:hover, &:active {
-			color: $colletions-link-hover-color;
-		}
-	}
-	.lp-link {
-		text-decoration: none;
-	}
-	
-	h1 {
-		// font-size: unset;
-		margin-top: 8.9em;
-		margin-bottom: 0;
-	}
+// Social media.
+.socialmedia {
+  display: block;
+  margin: 20px 0;
+  a {
+    margin-right: 10px;
+  }
 }
 
-// Collections landingpage		
-.landingpage#collections {
-    text-align: left;
-    margin: 0;
+// Breadcrumbs
+.breadcrumb {
+  margin-bottom: 15px;
+  a {
+    text-decoration: none !important;
+  }
+}
+
+// Download links
+#dl-links {
+  margin-bottom: 10px;
 }
 
 // Permalink
 .permalink {
-	clear: left;
-	margin-top: 25px;
-	.permalink-wrapper {
-		display: inline;
-	}
-	.permalink-input {
-		margin-right: 3px;
-	}
-	label {
-		display: inline;
-		margin-right: 10px;
-	}
+  clear: left;
+  margin-top: 25px;
+  .permalink-wrapper {
+    display: inline;
+  }
+  .permalink-input {
+    margin-right: 3px;
+  }
+  label {
+    display: inline;
+    margin-right: 10px;
+  }
 }
+
+// Overriding theme styles.
+.islandora-openseadragon {
+  width: 85% !important;
+}
+
+// Override solr styles. -BR 2016/3/11
+.form-item.form-type-textfield.form-item-date-filter-date-filter-from {
+  display: inline-block;
+  margin: 1em 0;
+}
+
+.form-item.form-type-textfield.form-item-date-filter-date-filter-to {
+  display: inline-block;
+  margin: 1em 0;
+}
+
+
+// Newspaper issue.
+.islandora-newspaper-issue-navigator {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.islandora-newspaper-object {
+  margin-top: 0 !important;
+}
+
+.islandora-metadata p {
+  margin: 0;
+}
+
+// Solr Blocks
+#block-islandora-solr-display-switch {
+  display: inline-block;
+  float: right;
+  font-weight: normal;
+  font-size: 140%;
+  ul {
+    list-style: none outside none;
+    margin-bottom: 0;
+    padding-inline-start: unset;
+  }
+  li {
+    display: inline;
+    border: $front-pg-panel-bg 1px;
+    // @note: enable this to swap colors on the active button
+    // .btn.active {
+    //   background-color: $front-pg-text-color;
+    //   color: $front-pg-panel-bg;
+    // }
+    & a {
+      padding: 6px 10px;
+      text-decoration: none;
+      background-color: $front-pg-panel-bg;
+      color: $front-pg-text-color;
+      &:hover { 
+        color: blue; // place holder @TODO
+      }
+    }
+  }
+}
+
+#block-bc-islandora-solr-sort-select {
+  display: inline-block;
+  float: right;
+  margin-right: 1em;
+}
+
+#islandora-solr-top {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.islandora-solr-content {
+  .pagination {
+    margin: unset;
+  }
+}
+
+// Solr Faceting
+.facet-heading {
+  a {
+    font-size: $collection-facets-text-size;
+  }
+  .facet-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';
+    content: "\2212";
+    float: right;
+    color: grey;
+    font-size: $collection-facets-glyphico-size;
+    margin-top: ($collection-facets-text-size - $collection-facets-glyphico-size)
+  }
+  .facet-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\002b";
+    font-size: $collection-facets-glyphico-size;
+    margin-top: ($collection-facets-text-size - $collection-facets-glyphico-size)
+  }
+}
+
 
 // Manuscript
 #manuscript-viewer {
-	width: 100%;
-	display: table;
-	margin-bottom: 10px;
-	#manuscript-viewer-transcript-pane {
-		float: left;
-		overflow: scroll;
-		margin-right: 20px;
-  		max-height: 500px;
-  		font-size: 12px;
-  		.manuscript-transcript-page {
-  			display: none;
-  			.active {
-  				display: block;
-  			}
-  			pre {
-  				font-size: 1.4em;
-  			}
-  		}
-	}
-	#manuscript-viewer-osd-pane {
-		float: left;
-		width: 90%;
-	}
+    width: 100%;
+    display: table;
+    margin-bottom: 10px;
+    #manuscript-viewer-transcript-pane {
+        float: left;
+        overflow: scroll;
+        margin-right: 20px;
+        max-height: 500px;
+        font-size: 12px;
+        .manuscript-transcript-page {
+            display: none;
+            .active {
+                display: block;
+            }
+            pre {
+                font-size: 1.4em;
+            }
+        }
+    }
+    #manuscript-viewer-osd-pane {
+        float: left;
+        width: 90%;
+    }
 }
 
+// Newspaper and yearbook landing pages.
+@mixin landing-page {
+  .inactive,
+  &.inactive {
+    display: none;
+  }
+  .active,
+  &.active {
+    display: block;
+  }
+  ul {
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+  }
+}
 
+#block-bc-islandora-bc-islandora-newspaper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#return-to-page {
+  margin-bottom: 5px;
+}
+
+.bulletin-calendar {
+  @include landing-page;
+}
+
+.yearbook-calendar {
+  @include landing-page;
+}
+
+#book-page-viewer {
+  margin-top: 10px;
+}
+
+// Yearbook landing page.
+#yearbook-nav {
+  span.year {
+    margin: 0 10px 10px 0;
+  }
+  .decade {
+    margin-left: 50px;
+    margin-bottom: 25px;
+  }
+}
+
+// Student publications.
+.islandora-basic-collection.student-pubs .islandora-basic-collection-object {
+  margin-left: 0;
+}
 
 /*# sourceMappingURL=_islandora.scss.map */
