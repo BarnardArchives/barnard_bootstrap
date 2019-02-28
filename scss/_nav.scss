@@ -1,3 +1,23 @@
+// Search on Navbar
+.simple-search {
+    margin-top: 1em;
+    margin-bottom: 0px;
+
+    div#edit-simple {
+        margin-bottom: 0;
+    }
+
+    button#edit-submit--2 {
+        padding: 6px 12px;
+        margin-left: 1em;
+    }
+
+    input#edit-islandora-simple-search-query {
+        max-width: 20em;
+    }
+
+}
+
 // Navbar
 .navbar-header {
     float: none;

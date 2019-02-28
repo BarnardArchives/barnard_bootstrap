@@ -16,10 +16,21 @@
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
-
-      <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
+      <div class="row">
+        <!-- <div class="col-md-6"> -->
+        <?php if (!empty($site_name)): ?>
+          <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+        <?php endif; ?>
+        <!-- </div> -->
+        <!-- <div class="col-md-6"> -->
+        <div class="simple-search search pull-right">
+          <?php
+            $form = drupal_get_form('islandora_solr_simple_search_form');
+            print drupal_render($form);
+          ?>
+        </div>
+        <!-- </div> -->
+      </div>
 
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">

@@ -5,8 +5,41 @@
  */
 
 // for devel
-function barnard_bootstrap_block_view_alter(&$data, $block) {
-  // kpr($block);
+// function barnard_bootstrap_block_view_alter(&$data, $block) {
+//   kpr($block);
+// }
+
+// function barnard_bootstrap_form_alter(&$form, &$form_state, $form_id) {
+//   kpr($form);
+// }
+
+
+function barnard_bootstrap_menu_link(array $variables) {
+  kpr($variables);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function barnard_bootstrap_form_islandora_solr_date_filter_form_alter(&$form, &$form_state, $form_id) {
+  // Auto-epxand the date form.
+  $form['date_range_expand']['#markup'] = '<span class="toggle-date-range-filter date-range-expanded"> </span>';
+  // Set the size.
+  $size = 4;
+  $form['date_filter']['date_filter_from']['#size'] = $size;
+  $form['date_filter']['date_filter_to']['#size'] = $size;
+  // Modify the suffix text.
+  $form['date_filter']['date_filter_from']['#suffix'] = '<span id="between-dates"> to </span>';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function barnard_bootstrap_form_islandora_solr_range_slider_form_alter(&$form, &$form_state, $form_id) {
+  // Disable access to the slider and all related items.
+  // $form['#access'] = FALSE;
+  $form['markup']['#access'] = FALSE;
+  $form['range_slider_submit']['#access'] = FALSE;
 }
 
 /**

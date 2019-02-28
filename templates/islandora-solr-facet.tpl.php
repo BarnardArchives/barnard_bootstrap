@@ -13,10 +13,6 @@
     <li>
       <?php print $bucket['link']; ?>
       <span class="count">(<?php print $bucket['count']; ?>)</span>
-<!--       <span class="plusminus">
-        <?php print $bucket['link_plus']; ?>
-        <?php print $bucket['link_minus']; ?>
-      </span> -->
     </li>
   <?php endforeach; ?>
 </ul>

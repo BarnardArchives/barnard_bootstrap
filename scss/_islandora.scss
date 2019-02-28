@@ -1,3 +1,4 @@
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
 $collection-facets-text-size: 24px;
 $collection-facets-glyphico-size: 14px;
 
@@ -119,9 +120,13 @@ $collection-facets-glyphico-size: 14px;
 }
 
 // Solr Faceting
+h3.facet-heading {
+  margin: 0 0 15px 0;
+}
 .facet-heading {
   a {
     font-size: $collection-facets-text-size;
+    text-decoration: unset !important;
   }
   .facet-toggle:after {
     /* symbol for "opening" panels */
@@ -130,16 +135,19 @@ $collection-facets-glyphico-size: 14px;
     float: right;
     color: grey;
     font-size: $collection-facets-glyphico-size;
-    margin-top: ($collection-facets-text-size - $collection-facets-glyphico-size)
+    margin-top: ($collection-facets-text-size - $collection-facets-glyphico-size);
   }
   .facet-toggle.collapsed:after {
     /* symbol for "collapsed" panels */
     content: "\002b";
     font-size: $collection-facets-glyphico-size;
-    margin-top: ($collection-facets-text-size - $collection-facets-glyphico-size)
+    margin-top: ($collection-facets-text-size - $collection-facets-glyphico-size);
   }
 }
 
+.islandora-solr-facet li {
+  margin-bottom: 15px;
+}
 
 // Manuscript
 #manuscript-viewer {
