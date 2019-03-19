@@ -23,7 +23,7 @@
         <?php endif; ?>
         <!-- </div> -->
         <!-- <div class="col-md-6"> -->
-        <div class="simple-search search pull-right">
+        <div class="navbar-simple-search simple-search pull-right">
           <?php
             $form = drupal_get_form('islandora_solr_simple_search_form');
             print drupal_render($form);

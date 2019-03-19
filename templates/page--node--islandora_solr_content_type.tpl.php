@@ -19,7 +19,7 @@
       <?php if (!empty($site_name)): ?>
         <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
-      <div class="simple-search search pull-right">
+      <div class="navbar-simple-search simple-search search pull-right">
           <?php
             $form = drupal_get_form('islandora_solr_simple_search_form');
             print drupal_render($form);

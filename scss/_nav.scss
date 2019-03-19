@@ -1,5 +1,5 @@
 // Search on Navbar
-.simple-search {
+.navbar-simple-search {
     margin-top: 1em;
     margin-bottom: 0px;
 
@@ -7,11 +7,13 @@
         margin-bottom: 0;
     }
 
-    button#edit-submit--2 {
+    // Simple Search Submit
+    button.form-submit {
         padding: 6px 12px;
         margin-left: 1em;
     }
-
+    
+    // Simple Search Input
     input#edit-islandora-simple-search-query {
         max-width: 20em;
     }

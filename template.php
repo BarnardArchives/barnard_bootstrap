@@ -14,9 +14,9 @@
 // }
 
 
-function barnard_bootstrap_menu_link(array $variables) {
-  kpr($variables);
-}
+// function barnard_bootstrap_menu_link(array $variables) {
+//   kpr($variables);
+// }
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -37,9 +37,18 @@ function barnard_bootstrap_form_islandora_solr_date_filter_form_alter(&$form, &$
  */
 function barnard_bootstrap_form_islandora_solr_range_slider_form_alter(&$form, &$form_state, $form_id) {
   // Disable access to the slider and all related items.
-  // $form['#access'] = FALSE;
-  $form['markup']['#access'] = FALSE;
-  $form['range_slider_submit']['#access'] = FALSE;
+  $disable_slider = TRUE;
+
+  if ($disable_slider) {
+    $form['markup']['#access'] = !$disable_slider;
+    $form['range_slider_submit']['#access'] = !$disable_slider;
+    drupal_add_js(drupal_get_path('theme', 'barnard_bootstrap') . '/js/date_slider.js', 
+      array(
+        'type' => 'file',
+        'weight' => 5,
+      ));
+  }
+
 }
 
 /**
