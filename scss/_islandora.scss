@@ -2,6 +2,11 @@ $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
 $collection-facets-text-size: 24px;
 $collection-facets-glyphico-size: 14px;
 
+// Video JS
+.vjs-default-skin, .vjs-big-play-button, .video-js {
+    z-index: 1;
+}
+
 // Social media.
 .socialmedia {
   display: block;

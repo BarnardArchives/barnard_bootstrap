@@ -18,6 +18,53 @@
 //   kpr($variables);
 // }
 
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function barnard_bootstrap_preprocess_page(&$vars) {
+  // Create new theme hook suggestion specific to nodes. This is used by Solr content type.
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+    $vars['theme_hook_suggestions'][] = 'page__node__' . $node->type;
+  }
+
+  // Navigation Simple Search
+  $simple_search_form = drupal_render(drupal_get_form('islandora_solr_simple_search_form'));
+  $vars['simple_search_box'] = $simple_search_form;
+
+  // If we have bc_islandora and this is the front page, invoke
+  // _bc_islandora_featured() and set  $vars['page']['footer']['front_caption'].
+  if (module_exists('bc_islandora') && $vars['is_front']) {
+    module_load_include('inc', 'bc_islandora', 'includes/theme');
+    $vars['page']['footer']['front_caption'] = [
+      '#markup' => _barnard_islandora_featured(),
+      '#prefix' => '<div id="block-views-featured-block">',
+      '#suffix' => '</div>',
+    ];
+  }
+  // If we have bc_islandora, this is NOT the front page, and this is not a
+  // search result page, call bc_islandora's custom breadcrumb theming method
+  // and set $vars['bc_breadcrumb'].
+  if (isset($node) && $node->type == 'islandora_solr_content_type') {
+    $vars['bc_breadcrumb'] = theme('bc_islandora_breadcrumb', ['breadcrumb' => menu_get_active_breadcrumb()]);
+  }
+  else {
+    if (module_exists('bc_islandora') && !$vars['is_front'] && arg(1) != 'search') {
+      $vars['bc_breadcrumb'] = theme('bc_islandora_breadcrumb', ['breadcrumb' => []]);
+    }
+  }
+  // If we have service_links, set $vars['socialmedia'].
+  //  if (module_exists('service_links') && _service_links_match_path()) {
+  //    $vars['socialmedia'] = implode('', service_links_render(NULL));
+  //  }
+  // If this is an islandora object, add permalink js.
+  if (arg(0) == 'islandora' && arg(1) == 'object') {
+    drupal_add_js(['permalink_path' => $_GET['q']], 'setting');
+    drupal_add_js(drupal_get_path('theme', 'barnard_bootstrap') . '/js/permalink.js');
+  }
+}
+
 /**
  * Implements hook_form_FORM_ID_alter().
  */
@@ -48,7 +95,6 @@ function barnard_bootstrap_form_islandora_solr_range_slider_form_alter(&$form, &
         'weight' => 5,
       ));
   }
-
 }
 
 /**
@@ -112,45 +158,7 @@ function _barnard_bootstrap_breadcrumb_view_exceptions($pid) {
   return '2up';
 }
 
-/**
- * Implements hook_preprocess_page().
- */
-function barnard_bootstrap_preprocess_page(&$vars) {
-  if (isset($vars['node'])) {
-    $node = $vars['node'];
-    $vars['theme_hook_suggestions'][] = 'page__node__' . $node->type;
-  }
-  // If we have bc_islandora and this is the front page, invoke
-  // _bc_islandora_featured() and set  $vars['page']['footer']['front_caption'].
-  if (module_exists('bc_islandora') && $vars['is_front']) {
-    module_load_include('inc', 'bc_islandora', 'includes/theme');
-    $vars['page']['footer']['front_caption'] = [
-      '#markup' => _barnard_islandora_featured(),
-      '#prefix' => '<div id="block-views-featured-block">',
-      '#suffix' => '</div>',
-    ];
-  }
-  // If we have bc_islandora, this is NOT the front page, and this is not a
-  // search result page, call bc_islandora's custom breadcrumb theming method
-  // and set $vars['bc_breadcrumb'].
-  if (isset($node) && $node->type == 'islandora_solr_content_type') {
-    $vars['bc_breadcrumb'] = theme('bc_islandora_breadcrumb', ['breadcrumb' => menu_get_active_breadcrumb()]);
-  }
-  else {
-    if (module_exists('bc_islandora') && !$vars['is_front'] && arg(1) != 'search') {
-      $vars['bc_breadcrumb'] = theme('bc_islandora_breadcrumb', ['breadcrumb' => []]);
-    }
-  }
-  // If we have service_links, set $vars['socialmedia'].
-  //  if (module_exists('service_links') && _service_links_match_path()) {
-  //    $vars['socialmedia'] = implode('', service_links_render(NULL));
-  //  }
-  // If this is an islandora object, add permalink js.
-  if (arg(0) == 'islandora' && arg(1) == 'object') {
-    drupal_add_js(['permalink_path' => $_GET['q']], 'setting');
-    drupal_add_js(drupal_get_path('theme', 'barnard_bootstrap') . '/js/permalink.js');
-  }
-}
+
 
 /**
  * Implements hook_preprocess_islandora_basic_collection_wrapper().

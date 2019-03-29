@@ -5806,7 +5806,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 .navbar-simple-search {
-  margin-top: 1em;
+  margin-top: .5em;
   margin-bottom: 0px; }
   .navbar-simple-search div#edit-simple {
     margin-bottom: 0; }
@@ -5968,6 +5968,9 @@ button.close {
     background: url(/sites/all/modules/bc_islandora/img/scrapbooks.jpg) no-repeat; }
   .landingpage-icon#barnard-magazine-collection {
     background: url(/sites/all/modules/bc_islandora/img/barnardmagazine.jpg) no-repeat; }
+
+.vjs-default-skin, .vjs-big-play-button, .video-js {
+  z-index: 1; }
 
 .socialmedia {
   display: block;
