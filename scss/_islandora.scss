@@ -126,8 +126,21 @@ $collection-facets-glyphico-size: 14px;
 
 // Solr Faceting
 h3.facet-heading {
-  margin: 0 0 15px 0;
+  margin: 15px 0 15px 0;
 }
+
+.islandora-solr-facet-wrapper {
+    border-bottom: 1px solid #333333;
+    margin-bottom: 15px;
+}
+.islandora-solr-facet-wrapper:last-child {
+    border: unset;
+}
+
+.islandora-solr-facet li {
+  margin-bottom: 15px;
+}
+
 .facet-heading {
   a {
     font-size: $collection-facets-text-size;
@@ -150,9 +163,7 @@ h3.facet-heading {
   }
 }
 
-.islandora-solr-facet li {
-  margin-bottom: 15px;
-}
+
 
 // Manuscript
 #manuscript-viewer {

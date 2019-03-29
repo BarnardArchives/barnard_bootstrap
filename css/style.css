@@ -6051,7 +6051,17 @@ button.close {
   margin: unset; }
 
 h3.facet-heading {
-  margin: 0 0 15px 0; }
+  margin: 15px 0 15px 0; }
+
+.islandora-solr-facet-wrapper {
+  border-bottom: 1px solid #333333;
+  margin-bottom: 15px; }
+
+.islandora-solr-facet-wrapper:last-child {
+  border: unset; }
+
+.islandora-solr-facet li {
+  margin-bottom: 15px; }
 
 .facet-heading a {
   font-size: 24px;
@@ -6069,9 +6079,6 @@ h3.facet-heading {
   content: "\002b";
   font-size: 14px;
   margin-top: 10px; }
-
-.islandora-solr-facet li {
-  margin-bottom: 15px; }
 
 #manuscript-viewer {
   width: 100%;

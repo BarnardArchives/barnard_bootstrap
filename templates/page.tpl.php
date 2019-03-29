@@ -3,8 +3,7 @@
  * @file
  * Returns the HTML for a single Drupal page.
  * 
- * @TODO
- * - Merge in OLD page.tpl.php AND system/page.tpl.php to this file; favor deprecating the old where applicable.
+ * @TODO: 
  **/
 ?>
 
