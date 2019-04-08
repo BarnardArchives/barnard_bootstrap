@@ -264,8 +264,8 @@ th {
     border: 1px solid #ddd !important; } }
 @font-face {
   font-family: "Glyphicons Halflings";
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("../bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -1218,22 +1218,22 @@ h6, .h6 {
     font-size: 75%; }
 
 h1, .h1 {
-  font-size: 40px; }
+  font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 36px; }
+  font-size: 2.25rem; }
 
 h3, .h3 {
-  font-size: 32px; }
+  font-size: 2rem; }
 
 h4, .h4 {
-  font-size: 28px; }
+  font-size: 1.75rem; }
 
 h5, .h5 {
-  font-size: 24px; }
+  font-size: 1.5rem; }
 
 h6, .h6 {
-  font-size: 20px; }
+  font-size: 1.25rem; }
 
 p {
   margin: 0 0 11px; }
@@ -3960,35 +3960,35 @@ tbody.collapse.in {
   background-color: #f8f8f8;
   border-color: #e7e7e7; }
   .navbar-default .navbar-brand {
-    color: #777; }
+    color: #F5F2E5; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-      color: #5e5e5e;
+      color: #e7e0c0;
       background-color: transparent; }
   .navbar-default .navbar-text {
     color: #777; }
   .navbar-default .navbar-nav > li > a {
-    color: #777; }
+    color: #F5F2E5; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-      color: #333;
+      color: #F1BDBB;
       background-color: transparent; }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #555;
-    background-color: #e7e7e7; }
+    color: #F1BDBB;
+    background-color: #363644; }
   .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    color: #555;
-    background-color: #e7e7e7; }
+    color: #F1BDBB;
+    background-color: #363644; }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-      color: #777; }
+      color: #F5F2E5; }
       .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: #333;
+        color: #F1BDBB;
         background-color: transparent; }
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-      color: #555;
-      background-color: #e7e7e7; }
+      color: #F1BDBB;
+      background-color: #363644; }
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #ccc;
       background-color: transparent; } }
@@ -4002,13 +4002,13 @@ tbody.collapse.in {
   .navbar-default .navbar-form {
     border-color: #e7e7e7; }
   .navbar-default .navbar-link {
-    color: #777; }
+    color: #F5F2E5; }
     .navbar-default .navbar-link:hover {
-      color: #333; }
+      color: #F1BDBB; }
   .navbar-default .btn-link {
-    color: #777; }
+    color: #F5F2E5; }
     .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
-      color: #333; }
+      color: #F1BDBB; }
     .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
       color: #ccc; }
 
@@ -5805,16 +5805,13 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.navbar-simple-search {
-  margin-top: .5em;
-  margin-bottom: 0px; }
-  .navbar-simple-search div#edit-simple {
-    margin-bottom: 0; }
-  .navbar-simple-search button.form-submit {
-    padding: 6px 12px;
-    margin-left: 1em; }
-  .navbar-simple-search input#edit-islandora-simple-search-query {
-    max-width: 20em; }
+.navbar-simple-search button.form-submit {
+  padding: 8.5px 12px;
+  margin-left: 5px;
+  margin-right: 20px; }
+.navbar-simple-search input#edit-islandora-simple-search-query {
+  max-width: 20em;
+  height: 41px; }
 
 .navbar-header {
   float: none; }
@@ -5826,22 +5823,30 @@ button.close {
   background: #363644; }
 
 .navbar-default .navbar-brand {
-  font-size: 36px;
-  color: #f5f2e5;
+  font-size: 2.5rem;
+  color: #F5F2E5;
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 20px; }
+  .navbar-default .navbar-brand:hover {
+    color: #F1BDBB; }
 
 .navbar-default .navbar-nav > li > a {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
-  color: #f5f2e5; }
+  color: #F5F2E5;
+  padding: 20px 25px 0px 25px; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #F1BDBB; }
 
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px;
   display: none; }
 
+/**
+ * @FILE: Themes the front page and components: promoted image, promoted image info-box, frontpage info-panel;
+ *
+ * All variables are in _default_variables.scss.
+ */
 .frontpage-panel {
   width: 46.5% !important;
   background: #363644;
@@ -5852,6 +5857,13 @@ button.close {
   line-height: 1.4em;
   margin-top: 60px;
   padding: 25px 25px !important; }
+  .frontpage-panel input#edit-islandora-simple-search-query {
+    height: 41px; }
+  .frontpage-panel .form-type-textfield {
+    max-width: 83.5%;
+    margin-right: 5px; }
+  .frontpage-panel .btn, .frontpage-panel .btn:active, .frontpage-panel .btn:visited, .frontpage-panel .btn:hover, .frontpage-panel .btn:focus {
+    padding: 8.5px 12px; }
   .frontpage-panel a {
     margin: 0; }
     .frontpage-panel a:link, .frontpage-panel a:visited {
@@ -5868,13 +5880,6 @@ button.close {
     margin-bottom: 0; }
     .frontpage-panel ul.links li {
       display: inline; }
-  .frontpage-panel .form-type-textfield {
-    max-width: 83.5%;
-    margin-right: 5px; }
-  .frontpage-panel .btn, .frontpage-panel .btn:active, .frontpage-panel .btn:visited {
-    padding: 6px 12px; }
-  .frontpage-panel .btn:hover, .frontpage-panel .btn:focus {
-    padding: 6px 12px; }
   .frontpage-panel #about-main, .frontpage-panel #frontpage-menu-mobile, .frontpage-panel #about-mobile, .frontpage-panel #edit-simple {
     padding: 0;
     margin-top: 20px; }
@@ -5903,6 +5908,11 @@ button.close {
     #block-views-featured-block a:hover, #block-views-featured-block a:active {
       color: #D9ABA9; }
 
+/**
+ * @FILE: Responsible for Islandora collections LANDING page;
+ *
+ * All variables are in _default_variables.scss.
+ */
 .panel-body {
   padding: 0; }
 
@@ -5969,6 +5979,11 @@ button.close {
   .landingpage-icon#barnard-magazine-collection {
     background: url(/sites/all/modules/bc_islandora/img/barnardmagazine.jpg) no-repeat; }
 
+/**
+ * @FILE: Responsible for theming Islandora components.;
+ *
+ * All variables are in _default_variables.scss.
+ */
 .vjs-default-skin, .vjs-big-play-button, .video-js {
   z-index: 1; }
 
@@ -6050,18 +6065,28 @@ button.close {
 .islandora-solr-content .pagination {
   margin: unset; }
 
-h3.facet-heading {
-  margin: 15px 0 15px 0; }
-
 .islandora-solr-facet-wrapper {
-  border-bottom: 1px solid #333333;
-  margin-bottom: 15px; }
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333333; }
 
 .islandora-solr-facet-wrapper:last-child {
-  border: unset; }
+  border-bottom: unset; }
+
+.block ul.islandora-solr-facet {
+  padding: 0px;
+  list-style: none; }
+  .block ul.islandora-solr-facet a {
+    text-decoration: none; }
+    .block ul.islandora-solr-facet a:hover, .block ul.islandora-solr-facet a:focus {
+      text-decoration: underline; }
 
 .islandora-solr-facet li {
-  margin-bottom: 15px; }
+  margin-top: 15px; }
+
+h3.facet-heading {
+  font-size: 70%;
+  margin: 0;
+  padding-top: 15px; }
 
 .facet-heading a {
   font-size: 24px;
@@ -6148,13 +6173,22 @@ h3.facet-heading {
 .view-id-exhibition .exhibition-object .views-field-body {
   margin-bottom: 20px; }
 
+html {
+  font-size: 16px; }
+
+body {
+  font-size: 1rem; }
+
+.navbar-default .navbar-brand {
+  font-size: 2.5rem; }
+
 .main-container a {
   text-decoration: underline; }
 
 .btn-primary, .btn-primary:active, .btn-primary:visited {
   background-color: #F1BDBB;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: #333333;
   padding: 12px 20px;
   border: 1px solid #D9ABA9; }
@@ -6167,7 +6201,7 @@ h3.facet-heading {
 .btn-info, .btn-info:active, .btn-info:visited {
   background-color: #F1BDBB;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: #333333;
   padding: 12px 20px;
   border: 1px solid #D9ABA9; }

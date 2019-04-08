@@ -1,6 +1,10 @@
-$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
-$collection-facets-text-size: 24px;
-$collection-facets-glyphico-size: 14px;
+/**
+ * @FILE: Responsible for theming Islandora components.;
+ *
+ * All variables are in _default_variables.scss.
+ */
+
+
 
 // Video JS
 .vjs-default-skin, .vjs-big-play-button, .video-js {
@@ -124,21 +128,37 @@ $collection-facets-glyphico-size: 14px;
   }
 }
 
-// Solr Faceting
-h3.facet-heading {
-  margin: 15px 0 15px 0;
+.islandora-solr-facet-wrapper {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333333;
 }
 
-.islandora-solr-facet-wrapper {
-    border-bottom: 1px solid #333333;
-    margin-bottom: 15px;
-}
 .islandora-solr-facet-wrapper:last-child {
-    border: unset;
+  border-bottom: unset;
+}
+
+.block ul.islandora-solr-facet {
+  padding: 0px;
+  list-style: none;
+  a {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: $link-hover-decoration;
+    }
+  }
 }
 
 .islandora-solr-facet li {
-  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+
+// Solr Faceting
+h3.facet-heading {
+  font-size: 70%;
+  margin: 0;
+  padding-top: 15px;
 }
 
 .facet-heading {

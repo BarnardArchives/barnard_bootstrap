@@ -1,11 +1,8 @@
-// Set the proper directory for the Bootstrap Glyphicon font.
-$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
-$front-pg-panel-bg: #363644;
-$front-pg-text-color: #F5F2E5;
-$front-pg-link-color: #F1BDBB; 
-$front-pg-link-hover-color: #D9ABA9;
-$front-pg-opacity: 0.85;
-$front-pg-border-radius: 4px;
+/**
+ * @FILE: Themes the front page and components: promoted image, promoted image info-box, frontpage info-panel;
+ *
+ * All variables are in _default_variables.scss.
+ */
 
 // Frontpage Panel
 .frontpage-panel {
@@ -18,6 +15,18 @@ $front-pg-border-radius: 4px;
   line-height: 1.4em;
   margin-top: 60px;
   padding: 25px 25px !important;
+  // Search box
+  input#edit-islandora-simple-search-query {
+    height: 41px;
+  }
+  .form-type-textfield {
+    max-width: 83.5%;
+    margin-right: 5px;
+  }
+  .btn, .btn:active, .btn:visited, .btn:hover, .btn:focus {
+    padding: 8.5px 12px;
+  }
+  // Links
   a {
     margin: 0;
     &:link, &:visited {
@@ -42,17 +51,7 @@ $front-pg-border-radius: 4px;
       display: inline;
     }
   }
-  .form-type-textfield {
-    max-width: 83.5%; // Yea.
-    margin-right: 5px;
-  }
-  .btn, .btn:active, .btn:visited, {
-    padding: 6px 12px;
-  }
-
-  .btn:hover, .btn:focus {
-    padding: 6px 12px;
-  }
+  // IDs
   #about-main, #frontpage-menu-mobile, #about-mobile, #edit-simple {
     padding: 0;
     margin-top: 20px;
