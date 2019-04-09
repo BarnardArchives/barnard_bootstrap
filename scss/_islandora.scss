@@ -5,6 +5,9 @@
  */
 
 
+h2.block-title {
+  font-size: ($font-size-h3 * 0.7);
+}
 
 // Video JS
 .vjs-default-skin, .vjs-big-play-button, .video-js {
@@ -81,6 +84,20 @@
 }
 
 // Solr Blocks
+
+// Facets.
+#islandora-solr-advanced-terms {
+  margin-bottom: 15px;
+  > div {
+    margin-bottom: 15px;
+    > div { // how deep can this rabbit hole go?
+      display: inline-block; // some would ask if there were easier ways. the answer is yes. ;)
+     }
+  }
+}
+
+
+
 #block-islandora-solr-display-switch {
   display: inline-block;
   float: right;
@@ -154,16 +171,16 @@
 }
 
 
+
 // Solr Faceting
 h3.facet-heading {
-  font-size: 70%;
   margin: 0;
   padding-top: 15px;
 }
 
 .facet-heading {
   a {
-    font-size: $collection-facets-text-size;
+    font-size: ($font-size-h3 * 0.7);
     text-decoration: unset !important;
   }
   .facet-toggle:after {

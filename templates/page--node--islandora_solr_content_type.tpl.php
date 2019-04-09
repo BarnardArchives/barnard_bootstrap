@@ -34,7 +34,7 @@
             <?php print render($primary_nav); ?>
           <?php endif; ?>
           <?php if (!empty($simple_search_box)): ?>
-            <div class="navbar-simple-search simple-search pull-right">
+            <div class="hidden-xs hidden-sm navbar-simple-search simple-search pull-right">
               <?php print render($simple_search_box); ?>
             </div>
           <?php endif; ?>

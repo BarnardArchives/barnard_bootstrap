@@ -9,6 +9,9 @@
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
+/**
+ * Start Barnard Variables.
+ */
 /*!
  * Bootstrap v3.4.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 Twitter, Inc.
@@ -3973,13 +3976,13 @@ tbody.collapse.in {
       background-color: transparent; }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #F1BDBB;
-    background-color: #363644; }
+    background-color: transparent; }
   .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #F1BDBB;
-    background-color: #363644; }
+    background-color: transparent; }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
       color: #F5F2E5; }
@@ -3988,7 +3991,7 @@ tbody.collapse.in {
         background-color: transparent; }
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #F1BDBB;
-      background-color: #363644; }
+      background-color: transparent; }
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #ccc;
       background-color: transparent; } }
@@ -5806,7 +5809,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 .navbar-simple-search button.form-submit {
-  padding: 8.5px 12px;
+  padding: 8px 12px;
   margin-left: 5px;
   margin-right: 20px; }
 .navbar-simple-search input#edit-islandora-simple-search-query {
@@ -5984,6 +5987,9 @@ button.close {
  *
  * All variables are in _default_variables.scss.
  */
+h2.block-title {
+  font-size: 1.4rem; }
+
 .vjs-default-skin, .vjs-big-play-button, .video-js {
   z-index: 1; }
 
@@ -6032,6 +6038,13 @@ button.close {
 
 .islandora-metadata p {
   margin: 0; }
+
+#islandora-solr-advanced-terms {
+  margin-bottom: 15px; }
+  #islandora-solr-advanced-terms > div {
+    margin-bottom: 15px; }
+    #islandora-solr-advanced-terms > div > div {
+      display: inline-block; }
 
 #block-islandora-solr-display-switch {
   display: inline-block;
@@ -6084,12 +6097,11 @@ button.close {
   margin-top: 15px; }
 
 h3.facet-heading {
-  font-size: 70%;
   margin: 0;
   padding-top: 15px; }
 
 .facet-heading a {
-  font-size: 24px;
+  font-size: 1.4rem;
   text-decoration: unset !important; }
 .facet-heading .facet-toggle:after {
   /* symbol for "opening" panels */

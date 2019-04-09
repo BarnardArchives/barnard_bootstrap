@@ -70,7 +70,7 @@ function barnard_bootstrap_preprocess_page(&$vars) {
  */
 function barnard_bootstrap_form_islandora_solr_date_filter_form_alter(&$form, &$form_state, $form_id) {
   // Auto-epxand the date form.
-  $form['date_range_expand']['#markup'] = '<span class="toggle-date-range-filter date-range-expanded"> </span>';
+  $form['date_range_expand']['#markup'] = '<span class="toggle-date-range-filter date-range-expanded"></span>';
   // Set the size.
   $size = 4;
   $form['date_filter']['date_filter_from']['#size'] = $size;
@@ -128,8 +128,13 @@ function barnard_bootstrap_block_view_islandora_solr_display_switch_alter(&$data
  */
 function barnard_bootstrap_islandora_solr_facet_wrapper($variables) {
   $output = '<div class="islandora-solr-facet-wrapper">';
-  $output .= '<h3 class="facet-heading"><a class="facet-toggle collapsed" data-toggle="collapse" href="#'. $variables['pid'] . '">' . $variables['title'] . '</a></h3>';
-  $output .= '<div class="collapse" id="' . $variables['pid'] . '">' . $variables['content'] . '</div>';
+  if ($variables['pid'] === "mods_originInfo_dateCreated_sort") {
+    $output .= '<h3 class="facet-heading"><a class="facet-toggle" data-toggle="collapse" href="#'. $variables['pid'] . '" aria-expanded="true">' . $variables['title'] . '</a></h3>';
+    $output .= '<div class="collapse in" id="' . $variables['pid'] . '" aria-expanded="true">' . $variables['content'] . '</div>';
+  } else {
+    $output .= '<h3 class="facet-heading"><a class="facet-toggle collapsed" data-toggle="collapse" href="#'. $variables['pid'] . '" aria-expanded="false">' . $variables['title'] . '</a></h3>';
+    $output .= '<div class="collapse" id="' . $variables['pid'] . '" aria-expanded="false">' . $variables['content'] . '</div>';
+  }
   $output .= '</div>';
   return $output;
 }

@@ -31,11 +31,15 @@ $font-size-h6: ($rem-font-size-base * 1.25);
 // Navbar links
 $navbar-default-link-color:                #F5F2E5;
 $navbar-default-link-hover-color:          #F1BDBB;
-// $navbar-default-link-hover-bg:             transparent;
+// $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #F1BDBB;
-$navbar-default-link-active-bg:            #363644;
+$navbar-default-link-active-bg:            transparent;
 // $navbar-default-link-disabled-color:       #ccc !default;
 // $navbar-default-link-disabled-bg:          transparent !default;
+
+/**
+ * Start Barnard Variables.
+ */
 
 $front-pg-panel-bg: #363644;
 $front-pg-text-color: #F5F2E5;
