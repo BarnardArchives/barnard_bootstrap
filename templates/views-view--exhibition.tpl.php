@@ -55,6 +55,7 @@
     <?php print $pager; ?>
   <?php endif; ?>
 
+
   <?php if ($rows): ?>
     <div class="view-content">
       <?php print $rows; ?>
@@ -64,6 +65,23 @@
       <?php print $empty; ?>
     </div>
   <?php endif; ?>
+
+
+<div class="views-row views-row-3 exhibition-object">
+	<div class="media">
+	  <div class="media-left">
+	    <a href="#">
+	      <img class="media-object" src="http://160.39.115.62/sites/default/files/intro-collage_0.jpg" alt="">
+	    </a>
+	  </div>
+	  <div class="media-body">
+	    <h4 class="media-heading"><a href="/exhibits/student-publishing-barnard">Student Publishing at Barnard</a></h4>
+	    	<p>Barnard’s most well known student publications are its most enduring, including the the <em>Barnard Bulletin</em> and the <em>Mortarboard</em>. But throughout Barnard’s history, its students have created dozens of short run and single run publications, often raising issues not addressed in the more well known publications. This exhibit highlights three themes found among these small run student publications housed in the Barnard Archives and Special Collections: Arts and Literature, Student Orientation Guides, and Politics and Activism.
+	    	</p>
+	  </div>
+	</div>
+</div>
+
 
   <?php if ($attachment_after): ?>
     <div class="attachment attachment-after">

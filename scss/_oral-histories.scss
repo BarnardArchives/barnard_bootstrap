@@ -1,0 +1,20 @@
+
+#transcript-tab > div.tier-selector-processed.navigation-processed {
+	display: none;
+}
+
+ul#tabs-list > li {
+    display: none;
+}
+
+div#video-js-oh {
+	height: 200px !important;
+}
+
+.transcript-container {
+	height: unset;
+}
+
+html.js fieldset.collapsed .fieldset-wrapper {
+	display: unset;
+}

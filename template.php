@@ -104,7 +104,7 @@ function barnard_bootstrap_form_islandora_solr_simple_search_form_alter(&$form, 
   // Control form size attrib with CSS width.
   unset($form['simple']['islandora_simple_search_query']['#size']);
   // Add placeholder text.
-  $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = "Search by name, keyword, etc.";
+  $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = "Search everything by name, keyword, etc.";
 }
 
 /**

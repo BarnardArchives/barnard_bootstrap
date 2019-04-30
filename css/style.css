@@ -5916,13 +5916,16 @@ button.close {
  *
  * All variables are in _default_variables.scss.
  */
-.panel-body {
+.landingpage .panel-body {
+  padding: 0; }
+
+.landingpage h4 {
   padding: 0; }
 
 .panel-footer.collections {
   background-color: #363644; }
   .panel-footer.collections a:link, .panel-footer.collections a:visited {
-    color: #f1bdbb; }
+    color: #F5F2E5; }
   .panel-footer.collections a:hover, .panel-footer.collections a:active {
     color: white; }
   .panel-footer.collections .lp-link {
@@ -5932,7 +5935,7 @@ button.close {
   background-color: #363644;
   text-align: left; }
   .collection-description a:link, .collection-description a:visited {
-    color: #f1bdbb; }
+    color: #F5F2E5; }
   .collection-description a:hover, .collection-description a:active {
     color: white; }
   .collection-description .lp-link {
@@ -6181,6 +6184,21 @@ h3.facet-heading {
   margin-left: 0; }
 
 /*# sourceMappingURL=_islandora.scss.map */
+#transcript-tab > div.tier-selector-processed.navigation-processed {
+  display: none; }
+
+ul#tabs-list > li {
+  display: none; }
+
+div#video-js-oh {
+  height: 200px !important; }
+
+.transcript-container {
+  height: unset; }
+
+html.js fieldset.collapsed .fieldset-wrapper {
+  display: unset; }
+
 .view-id-exhibition .exhibition-object .views-field-title,
 .view-id-exhibition .exhibition-object .views-field-body {
   margin-bottom: 20px; }

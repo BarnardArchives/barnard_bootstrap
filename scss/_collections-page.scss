@@ -4,7 +4,11 @@
  * All variables are in _default_variables.scss.
  */
 
-.panel-body {
+.landingpage .panel-body {
+  padding: 0;
+}
+
+.landingpage h4 {
   padding: 0;
 }
 
