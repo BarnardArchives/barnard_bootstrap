@@ -6120,6 +6120,17 @@ h3.facet-heading {
   font-size: 14px;
   margin-top: 10px; }
 
+#islandora-metadata-legend:after {
+  font-family: 'Glyphicons Halflings';
+  font-size: 1rem;
+  color: #333333;
+  content: "\2212";
+  display: inline-block;
+  margin-left: 10px; }
+
+#islandora-metadata-legend.collapsed:after {
+  content: "\002b"; }
+
 #manuscript-viewer {
   width: 100%;
   display: table;

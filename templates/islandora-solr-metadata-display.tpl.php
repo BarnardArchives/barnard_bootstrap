@@ -22,7 +22,7 @@
   if (!(empty($solr_fields) && variable_get('islandora_solr_metadata_omit_empty_values', FALSE))):?>
 <fieldset class="islandora islandora-metadata" 
 	<?php $print ? print('class="islandora islandora-metadata"') : print('class="islandora islandora-metadata collapsible collapsed"');?>>
-  <legend id="islandora-metadata-legend" aria-expanded="false" aria-controls="islandora-metadata" data-toggle="collapse" data-target="#islandora-metadata"><span id="islandora-metadata-legend-span" class="fieldset-legend"><?php print t('Details'); ?></span></legend>
+  <legend class="collapsed" id="islandora-metadata-legend" aria-expanded="false" aria-controls="islandora-metadata" data-toggle="collapse" data-target="#islandora-metadata"><span id="islandora-metadata-legend-span" class="fieldset-legend"><?php print t('Details'); ?></span></legend>
   <div class="fieldset-wrapper collapse" id="islandora-metadata"> 
     <dl xmlns:dcterms="http://purl.org/dc/terms/" class="islandora-inline-metadata islandora-metadata-fields">
       <?php $row_field = 0; ?>

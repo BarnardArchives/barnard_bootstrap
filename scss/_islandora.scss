@@ -171,7 +171,6 @@ h2.block-title {
 }
 
 
-
 // Solr Faceting
 h3.facet-heading {
   margin: 0;
@@ -200,6 +199,20 @@ h3.facet-heading {
   }
 }
 
+// Islandora Solr Metadata
+#islandora-metadata-legend:after {
+    font-family: 'Glyphicons Halflings';
+    font-size: 1rem;
+    color: #333333;
+    content: "\2212";
+    display: inline-block;
+    margin-left: 10px;
+    
+}
+
+#islandora-metadata-legend.collapsed:after {
+    content: "\002b";
+}
 
 
 // Manuscript
