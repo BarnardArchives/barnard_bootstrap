@@ -20,6 +20,22 @@
 
 
 /**
+ * Implements hook_theme().
+ *
+ * This doesn't belong here. 
+ */
+// function barnard_bootstrap_theme() {
+//   $path_bootstrap = drupal_get_path('theme', 'barnard_bootstrap');
+//   $path_solr_metadata = drupal_get_path('module', 'islandora_solr_metadata');
+//   dpm('Theme load.');
+//   return array(
+//     'islandora_solr_metadata_display' => array(
+//       'template' => 'templates/islandora-solr-metadata-display', 
+//     ),
+//   );
+// }
+
+/**
  * Implements hook_preprocess_page().
  */
 function barnard_bootstrap_preprocess_page(&$vars) {
