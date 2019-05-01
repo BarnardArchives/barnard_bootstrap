@@ -13,26 +13,8 @@
 //   kpr($form);
 // }
 
-
 // function barnard_bootstrap_menu_link(array $variables) {
 //   kpr($variables);
-// }
-
-
-/**
- * Implements hook_theme().
- *
- * This doesn't belong here. 
- */
-// function barnard_bootstrap_theme() {
-//   $path_bootstrap = drupal_get_path('theme', 'barnard_bootstrap');
-//   $path_solr_metadata = drupal_get_path('module', 'islandora_solr_metadata');
-//   dpm('Theme load.');
-//   return array(
-//     'islandora_solr_metadata_display' => array(
-//       'template' => 'templates/islandora-solr-metadata-display', 
-//     ),
-//   );
 // }
 
 /**
@@ -127,8 +109,10 @@ function barnard_bootstrap_form_islandora_solr_simple_search_form_alter(&$form, 
  * Implements hook_block_view_MODULE_DELTA_alter().
  */
 function barnard_bootstrap_block_view_islandora_solr_display_switch_alter(&$data, $block) {
-  $findArray = array('display-bcislandora-list', 'display-grid', 'A simple output.', 'List', 'Grid', 'active');
-  $replaceArray = array('btn glyphicon glyphicon-th-list display-bcislandora-list', 'btn glyphicon glyphicon-th-large display-grid', 'Display search results as a list view', '', '', 'active disabled');
+  $findArray = array('display-bcislandora-list', 'display-grid',
+    'A simple output.', 'List', 'Grid', 'active');
+  $replaceArray = array('btn glyphicon glyphicon-th-list display-bcislandora-list', 'btn glyphicon glyphicon-th-large display-grid',
+    'Display search results as a list view', '', '', 'active disabled');
   $data = str_replace($findArray, $replaceArray, $data);
 }
 
@@ -145,7 +129,7 @@ function barnard_bootstrap_block_view_islandora_solr_display_switch_alter(&$data
 function barnard_bootstrap_islandora_solr_facet_wrapper($variables) {
   $output = '<div class="islandora-solr-facet-wrapper">';
   if ($variables['pid'] === "mods_originInfo_dateCreated_sort") {
-    $output .= '<h3 class="facet-heading"><a class="facet-toggle" data-toggle="collapse" href="#'. $variables['pid'] . '" aria-expanded="true">' . $variables['title'] . '</a></h3>';
+    $output .= '<h3 class="facet-heading"><a class="facet-toggle" data-toggle="collapse" href="#' . $variables['pid'] . '" aria-expanded="true">' . $variables['title'] . '</a></h3>';
     $output .= '<div class="collapse in" id="' . $variables['pid'] . '" aria-expanded="true">' . $variables['content'] . '</div>';
   } else {
     $output .= '<h3 class="facet-heading"><a class="facet-toggle collapsed" data-toggle="collapse" href="#'. $variables['pid'] . '" aria-expanded="false">' . $variables['title'] . '</a></h3>';
