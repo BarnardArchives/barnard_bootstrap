@@ -79,11 +79,13 @@ h2.block-title {
   margin-top: 0 !important;
 }
 
+// Solr Blocks
+
+// Metadata
 .islandora-metadata p {
   margin: 0;
 }
 
-// Solr Blocks
 
 // Facets.
 #islandora-solr-advanced-terms {
@@ -95,8 +97,6 @@ h2.block-title {
      }
   }
 }
-
-
 
 #block-islandora-solr-display-switch {
   display: inline-block;
