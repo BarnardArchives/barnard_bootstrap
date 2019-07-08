@@ -41,11 +41,11 @@ $navbar-default-link-active-bg:            transparent;
  * Start Barnard Variables.
  */
 
-$front-pg-panel-bg: #363644;
+$front-pg-panel-bg: rgba(54, 54, 68, .85);
 $front-pg-text-color: #F5F2E5;
-$front-pg-link-color: #F1BDBB; 
+$front-pg-link-color: #F1BDBB;
 $front-pg-link-hover-color: #D9ABA9;
-$front-pg-opacity: 0.85;
+$front-pg-opacity: 1.0;
 $front-pg-border-radius: 4px;
 
 $collections-collection-panel: #363644;
