@@ -5927,7 +5927,7 @@ button.close {
   .panel-footer.collections a:link, .panel-footer.collections a:visited {
     color: #F5F2E5; }
   .panel-footer.collections a:hover, .panel-footer.collections a:active {
-    color: white; }
+    color: #F1BDBB; }
   .panel-footer.collections .lp-link {
     text-decoration: none; }
 
@@ -5937,7 +5937,7 @@ button.close {
   .collection-description a:link, .collection-description a:visited {
     color: #F5F2E5; }
   .collection-description a:hover, .collection-description a:active {
-    color: white; }
+    color: #F1BDBB; }
   .collection-description .lp-link {
     text-decoration: none; }
   .collection-description h1 {
