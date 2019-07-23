@@ -28,6 +28,8 @@ $font-size-h4: ($rem-font-size-base * 1.75);
 $font-size-h5: ($rem-font-size-base * 1.5);
 $font-size-h6: ($rem-font-size-base * 1.25);
 
+$headings-font-family: Georgia, "Times New Roman", Times, serif;
+
 // Navbar links
 $navbar-default-link-color:                #F5F2E5;
 $navbar-default-link-hover-color:          #F1BDBB;
@@ -41,11 +43,11 @@ $navbar-default-link-active-bg:            transparent;
  * Start Barnard Variables.
  */
 
-$front-pg-panel-bg: #363644;
+$front-pg-panel-bg: rgba(54, 54, 68, .85);
 $front-pg-text-color: #F5F2E5;
-$front-pg-link-color: #F1BDBB; 
+$front-pg-link-color: #F1BDBB;
 $front-pg-link-hover-color: #D9ABA9;
-$front-pg-opacity: 0.85;
+$front-pg-opacity: 1.0;
 $front-pg-border-radius: 4px;
 
 $collections-collection-panel: #363644;
