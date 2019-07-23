@@ -1505,7 +1505,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -7382,8 +7382,8 @@ td.visible-print {
  */
 .frontpage-panel {
   width: 46.5% !important;
-  background: rgba(54, 54, 68, 0.85);
-  opacity: 1;
+  background: #363644;
+  opacity: 0.85;
   border-radius: 4px;
   font-family: Arial, sans-serif;
   color: #F5F2E5;
@@ -7440,8 +7440,8 @@ td.visible-print {
 }
 
 #block-views-featured-block {
-  background: rgba(54, 54, 68, 0.85);
-  opacity: 1;
+  background: #363644;
+  opacity: 0.85;
   border-radius: 4px;
   max-width: 300px;
   float: right;
@@ -7592,7 +7592,7 @@ h2.block-title {
 .permalink {
   clear: left;
   margin-top: 25px;
-  width: 400px;
+  width: 401px;
 }
 .permalink .permalink-wrapper {
   display: inline;
@@ -7655,12 +7655,12 @@ h2.block-title {
 }
 #block-islandora-solr-display-switch li {
   display: inline;
-  border: rgba(54, 54, 68, 0.85) 1px;
+  border: #363644 1px;
 }
 #block-islandora-solr-display-switch li a {
   padding: 6px 10px;
   text-decoration: none;
-  background-color: rgba(54, 54, 68, 0.85);
+  background-color: #363644;
   color: #F5F2E5;
 }
 #block-islandora-solr-display-switch li a:hover {

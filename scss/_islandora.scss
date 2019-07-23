@@ -40,6 +40,7 @@ h2.block-title {
 .permalink {
   clear: left;
   margin-top: 25px;
+  width: 400px; 
   .permalink-wrapper {
     display: inline;
   }
@@ -121,7 +122,7 @@ h2.block-title {
       text-decoration: none;
       background-color: $front-pg-panel-bg;
       color: $front-pg-text-color;
-      &:hover { 
+      &:hover {
         color: blue; // place holder @TODO
       }
     }
@@ -207,7 +208,7 @@ h3.facet-heading {
     content: "\2212";
     display: inline-block;
     margin-left: 10px;
-    
+
 }
 
 #islandora-metadata-legend.collapsed:after {
