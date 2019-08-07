@@ -17,7 +17,13 @@
  * @see theme_islandora_oralhistories()
  */
 ?>
-
+<?php // Provide datastream download links, if available. ?>
+<?php if (isset($dl_links) && !empty($dl_links)): ?>
+    <p>
+        <strong>Download: </strong>
+      <?php print $dl_links; ?>
+    </p>
+<?php endif; ?>
 <div class="islandora-oralhistories-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="VideoObject">
   <div class="islandora-oralhistories-content-wrapper  clearfix">
     <?php print $metadata; ?>
