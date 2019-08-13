@@ -40,7 +40,7 @@ h2.block-title {
 .permalink {
   clear: left;
   margin-top: 25px;
-  width: 400px; 
+  width: 400px;
   .permalink-wrapper {
     display: inline;
   }
@@ -241,6 +241,28 @@ h3.facet-heading {
         float: left;
         width: 90%;
     }
+}
+
+// Book page nav
+#BRpage {
+  min-width: 292px;
+}
+
+@media (max-width: $screen-xs) {
+  .islandora-internet-archive-bookreader #BRnav {
+    height: 80px;
+
+    #BRpage {
+      float: none;
+      display: flex;
+    }
+    #BRnavpos {
+      margin-right: 0;
+    }
+  }
+  .BRnavCntl {
+    top: -30px;
+  }
 }
 
 // Newspaper and yearbook landing pages.

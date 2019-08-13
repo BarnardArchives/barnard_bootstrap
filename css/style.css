@@ -7770,6 +7770,26 @@ h3.facet-heading {
   width: 90%;
 }
 
+#BRpage {
+  min-width: 292px;
+}
+
+@media (max-width: 480px) {
+  .islandora-internet-archive-bookreader #BRnav {
+    height: 80px;
+  }
+  .islandora-internet-archive-bookreader #BRnav #BRpage {
+    float: none;
+    display: flex;
+  }
+  .islandora-internet-archive-bookreader #BRnav #BRnavpos {
+    margin-right: 0;
+  }
+
+  .BRnavCntl {
+    top: -30px;
+  }
+}
 #block-bc-islandora-bc-islandora-newspaper {
   width: 100%;
   margin: 0 auto;
