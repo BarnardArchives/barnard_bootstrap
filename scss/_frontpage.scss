@@ -6,21 +6,19 @@
 
 // Frontpage Panel
 .frontpage-panel {
-  width: 46.5% !important; // Override column-*-6 by -3.5% ;)
   background: $front-pg-panel-bg;
   opacity: $front-pg-opacity;
   border-radius: $front-pg-border-radius;
   font-family: $font-family-sans-serif;
   color: $front-pg-text-color;
   line-height: 1.4em;
-  margin-top: 60px;
+  margin-top: 1.5em;
   padding: 25px 25px !important;
   // Search box
   input#edit-islandora-simple-search-query {
     height: 41px;
   }
   .form-type-textfield {
-    max-width: 83.5%;
     margin-right: 5px;
   }
   .btn, .btn:active, .btn:visited, .btn:hover, .btn:focus {
@@ -59,6 +57,23 @@
   #frontpage-menu-mobile, #about-mobile {
     display: none;
   }
+  // small screens
+  @media (min-width: $screen-xs) {
+    margin-top: 4em;
+
+    #edit-simple {
+      display: flex;
+    }
+    .form-type-textfield {
+      margin-bottom: 0;
+    }
+  }
+  // large screens
+  @media (min-width: $screen-md) {
+    .form-inline .form-control {
+      width: 100%;
+    }
+  }
 }
 
 // Frontpage footer
@@ -67,6 +82,13 @@
   bottom: 50px;
   left: 0;
   right: 0;
+  // short or small screens {
+  @media (max-height: $screen-xs), (max-width: $screen-xs) {
+    position: relative;
+    bottom: 0;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+  }
 }
 
 // Frontpage Featured
