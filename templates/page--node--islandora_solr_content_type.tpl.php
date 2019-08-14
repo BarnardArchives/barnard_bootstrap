@@ -7,7 +7,7 @@
  **/
 ?>
 
-<header id="navbar" role="banner" class="navbar navbar-static-top navbar-default">
+<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
     <div class="navbar-header">
       <?php if ($logo): ?>
