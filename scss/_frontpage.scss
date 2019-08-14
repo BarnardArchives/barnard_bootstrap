@@ -13,7 +13,7 @@
   color: $front-pg-text-color;
   line-height: 1.4em;
   margin-top: 1.5em;
-  padding: 25px 25px !important;
+  padding: 1.25em;
   // Search box
   input#edit-islandora-simple-search-query {
     height: 41px;
@@ -60,6 +60,7 @@
   // small screens
   @media (min-width: $screen-xs) {
     margin-top: 4em;
+    padding: 1.5em;
 
     #edit-simple {
       display: flex;
