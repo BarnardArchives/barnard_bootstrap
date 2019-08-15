@@ -18,25 +18,27 @@
       <?php if (!empty($site_name)): ?>
         <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
-      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      <?php endif; ?>
+      <div class="navbar-search-menu">
+        <?php if (!empty($simple_search_box)): ?>
+          <div class="navbar-simple-search simple-search">
+            <?php print render($simple_search_box); ?>
+          </div>
+        <?php endif; ?>
+        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <?php endif; ?>
+      </div>
     </div>
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($simple_search_box) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse" id="navbar-collapse">
         <nav role="navigation">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($simple_search_box)): ?>
-            <div class="hidden-xs hidden-sm navbar-simple-search simple-search pull-right">
-              <?php print render($simple_search_box); ?>
-            </div>
           <?php endif; ?>
           <?php if (!empty($secondary_nav)): ?>
             <?php print render($secondary_nav); ?>
