@@ -51,8 +51,25 @@
 .landingpage#collections {
   text-align: left;
   margin: 0;
-  max-width: 860px;
+  max-width: 860px; //consider updating to max-width: none; now that titles use larger font-size
   margin: 0 auto;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .col-sm-6 {
+    min-width: 15em;
+    max-width: 25em;
+    margin: 0 auto;
+
+    // not small screens
+    @media (min-width: $screen-sm) {
+      margin-left: 0;
+    }
+  }
 }
 
 .landingpage-link {
@@ -84,21 +101,21 @@
     background: url(/sites/all/modules/bc_islandora/img/photographs.jpg) no-repeat top left;
   }
   &#newspaper-collection {
-    background: url(/sites/all/modules/bc_islandora/img/bulletin.jpg) no-repeat; 
+    background: url(/sites/all/modules/bc_islandora/img/bulletin.jpg) no-repeat;
   }
   &#yearbook-collection {
-    background: url(/sites/all/modules/bc_islandora/img/mortarboard.jpg) no-repeat; 
+    background: url(/sites/all/modules/bc_islandora/img/mortarboard.jpg) no-repeat;
   }
   &#student-publication-collection {
-    background: url(/sites/all/modules/bc_islandora/img/studentpublications.jpg) no-repeat; 
+    background: url(/sites/all/modules/bc_islandora/img/studentpublications.jpg) no-repeat;
   }
   &#barnard-center-for-research-on-women-collection {
-    background: url(/sites/all/modules/bc_islandora/img/bcrw.jpg) no-repeat; 
+    background: url(/sites/all/modules/bc_islandora/img/bcrw.jpg) no-repeat;
   }
   &#scrapbook-collection {
-    background: url(/sites/all/modules/bc_islandora/img/scrapbooks.jpg) no-repeat; 
+    background: url(/sites/all/modules/bc_islandora/img/scrapbooks.jpg) no-repeat;
   }
   &#barnard-magazine-collection {
-    background: url(/sites/all/modules/bc_islandora/img/barnardmagazine.jpg) no-repeat; 
+    background: url(/sites/all/modules/bc_islandora/img/barnardmagazine.jpg) no-repeat;
   }
 }

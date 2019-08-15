@@ -7603,6 +7603,21 @@ td.visible-print {
   max-width: 860px;
   margin: 0 auto;
 }
+.landingpage#collections > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.landingpage#collections .col-sm-6 {
+  min-width: 15em;
+  max-width: 25em;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .landingpage#collections .col-sm-6 {
+    margin-left: 0;
+  }
+}
 
 .landingpage-link {
   width: 200px;
