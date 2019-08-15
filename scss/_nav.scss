@@ -1,57 +1,146 @@
 // Search on Navbar
 .navbar-simple-search {
-    // margin-top:10px;
-    // margin-bottom: 0px;
+  margin-top: 0.5em;
+  padding-left: 15px;
 
-    // Simple Search Submit
-    button.form-submit {
-        padding: 8px 12px;
-        margin-left: 5px;
-        margin-right: 20px;
+  .form-inline.form-group {
+    display: flex;
+
+    .form-group {
+      margin-bottom: 0;
     }
-    
-    // Simple Search Input
+  }
+
+  // Simple Search Submit
+  button.form-submit {
+    padding: 8px 12px;
+    margin-left: 5px;
+  }
+
+  // Simple Search Input
+  input#edit-islandora-simple-search-query {
+    max-width: 18em;
+    width: 100%;
+    height: 41px;
+  }
+
+  // not small screens
+  @media (min-width: $screen-sm) {
+    float: right;
+    margin-top: -0.5em;
+    padding-left: 0;
+
+    .form-inline.form-group {
+      margin-bottom: -3em;
+    }
+  }
+
+  // large screens
+  @media (min-width: $screen-md) {
     input#edit-islandora-simple-search-query {
-        max-width: 20em;
-        height: 41px;
+      max-width: 20em;
     }
+  }
 }
 
 // Navbar
 .navbar-header {
-    float: none;
+  float: none;
 }
 
 .navbar-default {
-    font-family: $font-family-sans-serif;
-    width: 100%;
-    height: 115px;
-    background: #363644;
-}
+  font-family: $font-family-sans-serif;
+  width: 100%;
+  background: #363644;
+  padding-bottom: 1em;
 
-.navbar-default .navbar-brand {
+  .navbar-brand {
     font-size: $font-size-h1; // 2.5rem
     color: #F5F2E5;
     font-family: $font-family-serif;
-    padding: 20px;
-    &:hover {
-        color: #F1BDBB;
-    }
-}
+    line-height: 1.1;
+    padding: 1rem 0 0.75rem;
+    padding-left: 15px;
+    display: block;
+    // Bootstrap overrides
+    float: none;
+    height: auto;
 
-.navbar-default .navbar-nav > li > a {
-    font-family: $font-family-sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #F5F2E5;
-    padding: 20px 25px 0px 25px;
     &:hover {
-        color: #F1BDBB;
+      color: #F1BDBB;
     }
+  }
+
+  .navbar-search-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-toggle {
+    height: 2.625em;
+    margin-left: 1em;
+  }
+
+  .navbar-collapse {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navbar-nav {
+    float: none;
+    padding-right: 1.25em;
+    margin-bottom: 0;
+
+    > li > a {
+      font-family: $font-family-sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #F5F2E5;
+      padding: 0.5em 0.625em;
+      &:hover {
+          color: #F1BDBB;
+      }
+    }
+
+    .dropdown-menu > li > a {
+      padding: 0.5em 1.25em;
+    }
+  }
+
+  .secondary {
+    float: none;
+    margin-top: 0;
+  }
+
+  // override subnav on small screens
+  @media (max-width: $screen-sm) {
+    .dropdown-menu > li > a {
+      padding: 0.5em 0 0.5em 2em;
+      white-space: normal;
+    }
+  }
+
+  // not small screens
+  @media (min-width: $screen-sm) {
+    .navbar-search-menu {
+      display: inherit;
+    }
+
+    .navbar-nav > .first.leaf > a {
+      padding-left: 0;
+    }
+  }
+
+  // large screens
+  @media (min-width: $screen-md) {
+    .navbar-nav > li > a {
+      padding: 0.5em 1.25em;
+    }
+  }
 }
 
 .navbar-btn {
-    // margin-top: 8px;
-    // margin-bottom: 8px;
-    display: none;        // temporary
+  // margin-top: 8px;
+  // margin-bottom: 8px;
+  display: none;        // temporary
 }
