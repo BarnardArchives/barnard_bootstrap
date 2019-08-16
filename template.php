@@ -228,6 +228,21 @@ function barnard_bootstrap_preprocess_islandora_large_image(&$vars) {
 }
 
 /**
+ * Implements hook_preprocess_islandora_book_book().
+ */
+function barnard_bootstrap_preprocess_islandora_oralhistories(&$vars) {
+  // Barnard Core Module.
+  if (!module_exists('bc_islandora')) {
+    return;
+  }
+  module_load_include('inc', 'bc_islandora', 'includes/theme');
+  $object = $vars['object'];
+
+  // Provide a link to this object's transcript datastream via $vars['dl_links'].
+  $vars['dl_links'] = _barnard_islandora_dl_links($object, ['TRANSCRIPT']);
+}
+
+/**
  * Implements hook_preprocess_islandora_manuscript_manuscript().
  */
 function barnard_bootstrap_preprocess_islandora_manuscript_manuscript(&$vars) {
