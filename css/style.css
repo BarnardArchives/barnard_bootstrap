@@ -5014,7 +5014,7 @@ tbody.collapse.in {
   color: #F5F2E5;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #e7e0c0;
+  color: #F5F2E5;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
@@ -7385,9 +7385,6 @@ td.visible-print {
   float: none;
   height: auto;
 }
-.navbar-default .navbar-brand:hover {
-  color: #F1BDBB;
-}
 .navbar-default .navbar-search-menu {
   display: flex;
   justify-content: space-between;
@@ -7573,7 +7570,7 @@ td.visible-print {
   color: #F5F2E5;
 }
 .panel-footer.collections a:hover, .panel-footer.collections a:active {
-  color: white;
+  color: #F1BDBB;
 }
 .panel-footer.collections .lp-link {
   text-decoration: none;
@@ -7587,7 +7584,7 @@ td.visible-print {
   color: #F5F2E5;
 }
 .collection-description a:hover, .collection-description a:active {
-  color: white;
+  color: #F1BDBB;
 }
 .collection-description .lp-link {
   text-decoration: none;
