@@ -7329,654 +7329,9 @@ td.visible-print {
     display: none !important;
   }
 }
-.navbar-simple-search {
-  margin-top: 0.5em;
-  padding-left: 15px;
-}
-.navbar-simple-search .form-inline.form-group {
-  display: flex;
-}
-.navbar-simple-search .form-inline.form-group .form-group {
-  margin-bottom: 0;
-}
-.navbar-simple-search button.form-submit {
-  padding: 8px 12px;
-  margin-left: 5px;
-}
-.navbar-simple-search input#edit-islandora-simple-search-query {
-  max-width: 18em;
-  width: 100%;
-  height: 41px;
-}
-@media (min-width: 768px) {
-  .navbar-simple-search {
-    float: right;
-    margin-top: -0.5em;
-    padding-left: 0;
-  }
-  .navbar-simple-search .form-inline.form-group {
-    margin-bottom: -3em;
-  }
-}
-@media (min-width: 992px) {
-  .navbar-simple-search input#edit-islandora-simple-search-query {
-    max-width: 20em;
-  }
-}
-
-.navbar-header {
-  float: none;
-}
-
-.navbar-default {
-  font-family: Arial, sans-serif;
-  width: 100%;
-  background: #363644;
-  padding-bottom: 1em;
-}
-.navbar-default .navbar-brand {
-  font-size: 2.5rem;
-  color: #F5F2E5;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  line-height: 1.1;
-  padding: 1rem 0 0.75rem;
-  padding-left: 15px;
-  display: block;
-  float: none;
-  height: auto;
-}
-.navbar-default .navbar-search-menu {
-  display: flex;
-  justify-content: space-between;
-}
-.navbar-default .navbar-toggle {
-  height: 2.625em;
-  margin-left: 1em;
-}
-.navbar-default .navbar-collapse {
-  margin-left: 0;
-  margin-right: 0;
-}
-.navbar-default .navbar-nav {
-  float: none;
-  padding-right: 1.25em;
-  margin-bottom: 0;
-}
-.navbar-default .navbar-nav > li > a {
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #F5F2E5;
-  padding: 0.5em 0.625em;
-}
-.navbar-default .navbar-nav > li > a:hover {
-  color: #F1BDBB;
-}
-.navbar-default .navbar-nav .dropdown-menu > li > a {
-  padding: 0.5em 1.25em;
-}
-.navbar-default .secondary {
-  float: none;
-  margin-top: 0;
-}
-@media (max-width: 768px) {
-  .navbar-default .dropdown-menu > li > a {
-    padding: 0.5em 0 0.5em 2em;
-    white-space: normal;
-  }
-}
-@media (min-width: 768px) {
-  .navbar-default .navbar-search-menu {
-    display: inherit;
-  }
-  .navbar-default .navbar-nav > .first.leaf > a {
-    padding-left: 0;
-  }
-}
-@media (min-width: 992px) {
-  .navbar-default .navbar-nav > li > a {
-    padding: 0.5em 1.25em;
-  }
-}
-
-.navbar-btn {
-  display: none;
-}
-
-/**
- * @FILE: Themes the front page and components: promoted image, promoted image info-box, frontpage info-panel;
- *
- * All variables are in _default_variables.scss.
- */
-.frontpage-panel {
-  background: rgba(54, 54, 68, 0.85);
-  opacity: 1;
-  border-radius: 4px;
-  font-family: Arial, sans-serif;
-  color: #F5F2E5;
-  line-height: 1.4em;
-  margin-top: 1.5em;
-  padding: 1.25em;
-}
-.frontpage-panel input#edit-islandora-simple-search-query {
-  height: 41px;
-}
-.frontpage-panel .form-type-textfield {
-  margin-right: 5px;
-}
-.frontpage-panel .btn, .frontpage-panel .btn:active, .frontpage-panel .btn:visited, .frontpage-panel .btn:hover, .frontpage-panel .btn:focus {
-  padding: 8.5px 12px;
-}
-.frontpage-panel a {
-  margin: 0;
-}
-.frontpage-panel a:link, .frontpage-panel a:visited {
-  color: #F1BDBB;
-}
-.frontpage-panel a:hover, .frontpage-panel a:active {
-  color: #D9ABA9;
-}
-.frontpage-panel h1 {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-.frontpage-panel p {
-  margin: 0;
-}
-.frontpage-panel ul.links {
-  padding: 0;
-  margin-bottom: 0;
-}
-.frontpage-panel ul.links li {
-  display: inline;
-}
-.frontpage-panel #about-main, .frontpage-panel #frontpage-menu-mobile, .frontpage-panel #about-mobile, .frontpage-panel #edit-simple {
-  padding: 0;
-  margin-top: 20px;
-}
-.frontpage-panel #frontpage-menu-mobile, .frontpage-panel #about-mobile {
-  display: none;
-}
-@media (min-width: 480px) {
-  .frontpage-panel {
-    margin-top: 4em;
-    padding: 1.5em;
-  }
-  .frontpage-panel #edit-simple {
-    display: flex;
-  }
-  .frontpage-panel .form-type-textfield {
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 992px) {
-  .frontpage-panel .form-inline .form-control {
-    width: 100%;
-  }
-}
-
-.front-footer {
-  position: fixed;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-}
-@media (max-height: 480px), (max-width: 480px) {
-  .front-footer {
-    position: relative;
-    bottom: 0;
-    margin-top: 2em;
-    margin-bottom: 1.5em;
-  }
-}
-
-#block-views-featured-block {
-  background: rgba(54, 54, 68, 0.85);
-  opacity: 1;
-  border-radius: 4px;
-  max-width: 300px;
-  float: right;
-  padding: 10px 15px;
-  color: #F5F2E5;
-}
-#block-views-featured-block a {
-  display: inline-block;
-  line-height: 1.75em;
-}
-#block-views-featured-block a:link, #block-views-featured-block a:visited {
-  color: #F1BDBB;
-}
-#block-views-featured-block a:hover, #block-views-featured-block a:active {
-  color: #D9ABA9;
-}
-
-/**
- * @FILE: Responsible for Islandora collections LANDING page;
- *
- * All variables are in _default_variables.scss.
- */
-.landingpage .panel-body {
-  padding: 0;
-}
-
-.landingpage h4 {
-  padding: 0;
-}
-
-.panel-footer.collections {
-  background-color: #363644;
-}
-.panel-footer.collections a:link, .panel-footer.collections a:visited {
-  color: #F5F2E5;
-}
-.panel-footer.collections a:hover, .panel-footer.collections a:active {
-  color: #F1BDBB;
-}
-.panel-footer.collections .lp-link {
-  text-decoration: none;
-}
-
-.collection-description {
-  background-color: #363644;
-  text-align: left;
-}
-.collection-description a:link, .collection-description a:visited {
-  color: #F5F2E5;
-}
-.collection-description a:hover, .collection-description a:active {
-  color: #F1BDBB;
-}
-.collection-description .lp-link {
-  text-decoration: none;
-}
-.collection-description h1 {
-  margin-top: 8.9em;
-  margin-bottom: 0;
-}
-
-.landingpage#collections {
-  text-align: left;
-  margin: 0;
-  max-width: 860px;
-  margin: 0 auto;
-}
-.landingpage#collections > div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.landingpage#collections .col-sm-6 {
-  min-width: 15em;
-  max-width: 25em;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .landingpage#collections .col-sm-6 {
-    margin-left: 0;
-  }
-}
-
-.landingpage-link {
-  width: 200px;
-}
-
-.landingpage-icon {
-  display: inline-block;
-  width: 220px;
-  background-size: 225px 225px !important;
-  margin-right: 50px;
-  margin-bottom: 50px;
-  cursor: pointer;
-}
-.landingpage-icon a {
-  text-decoration: none;
-}
-.landingpage-icon a.lp-link {
-  display: block;
-  font-size: 0.95em;
-  padding: 0 2px 1px 2px;
-}
-.landingpage-icon h1 {
-  font-size: 1.26em;
-  margin-top: 8.9em;
-  margin-bottom: 0;
-}
-.landingpage-icon#photograph-collection {
-  background: url(/sites/all/modules/bc_islandora/img/photographs.jpg) no-repeat top left;
-}
-.landingpage-icon#newspaper-collection {
-  background: url(/sites/all/modules/bc_islandora/img/bulletin.jpg) no-repeat;
-}
-.landingpage-icon#yearbook-collection {
-  background: url(/sites/all/modules/bc_islandora/img/mortarboard.jpg) no-repeat;
-}
-.landingpage-icon#student-publication-collection {
-  background: url(/sites/all/modules/bc_islandora/img/studentpublications.jpg) no-repeat;
-}
-.landingpage-icon#barnard-center-for-research-on-women-collection {
-  background: url(/sites/all/modules/bc_islandora/img/bcrw.jpg) no-repeat;
-}
-.landingpage-icon#scrapbook-collection {
-  background: url(/sites/all/modules/bc_islandora/img/scrapbooks.jpg) no-repeat;
-}
-.landingpage-icon#barnard-magazine-collection {
-  background: url(/sites/all/modules/bc_islandora/img/barnardmagazine.jpg) no-repeat;
-}
-
-/**
- * @FILE: Responsible for theming Islandora components.;
- *
- * All variables are in _default_variables.scss.
- */
-h2.block-title {
-  font-size: 1.4rem;
-}
-
-.vjs-default-skin, .vjs-big-play-button, .video-js {
-  z-index: 1;
-}
-
-.socialmedia {
-  display: block;
-  margin: 20px 0;
-}
-.socialmedia a {
-  margin-right: 10px;
-}
-
-.breadcrumb {
-  margin-bottom: 15px;
-}
-.breadcrumb a {
-  text-decoration: none !important;
-}
-
-#dl-links {
-  margin-bottom: 10px;
-}
-
-.permalink {
-  clear: left;
-  margin-top: 25px;
-  width: 400px;
-}
-.permalink .permalink-wrapper {
-  display: inline;
-}
-.permalink .permalink-input {
-  margin-right: 3px;
-}
-.permalink label {
-  display: inline;
-  margin-right: 10px;
-}
-
-.islandora-openseadragon {
-  width: 85% !important;
-}
-
-.form-item.form-type-textfield.form-item-date-filter-date-filter-from {
-  display: inline-block;
-  margin: 1em 0;
-}
-
-.form-item.form-type-textfield.form-item-date-filter-date-filter-to {
-  display: inline-block;
-  margin: 1em 0;
-}
-
-.islandora-newspaper-issue-navigator {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.islandora-newspaper-object {
-  margin-top: 0 !important;
-}
-
-.islandora-metadata p {
-  margin: 0;
-}
-
-#islandora-solr-advanced-terms {
-  margin-bottom: 15px;
-}
-#islandora-solr-advanced-terms > div {
-  margin-bottom: 15px;
-}
-#islandora-solr-advanced-terms > div > div {
-  display: inline-block;
-}
-
-#block-islandora-solr-display-switch {
-  display: inline-block;
-  float: right;
-  font-weight: normal;
-  font-size: 140%;
-}
-#block-islandora-solr-display-switch ul {
-  list-style: none outside none;
-  margin-bottom: 0;
-  padding-inline-start: unset;
-}
-#block-islandora-solr-display-switch li {
-  display: inline;
-  border: rgba(54, 54, 68, 0.85) 1px;
-}
-#block-islandora-solr-display-switch li a {
-  padding: 6px 10px;
-  text-decoration: none;
-  background-color: rgba(54, 54, 68, 0.85);
-  color: #F5F2E5;
-}
-#block-islandora-solr-display-switch li a:hover {
-  color: blue;
-}
-
-#block-bc-islandora-solr-sort-select {
-  display: inline-block;
-  float: right;
-  margin-right: 1em;
-}
-
-#islandora-solr-top {
-  text-align: center;
-  margin-top: 3em;
-}
-
-.islandora-solr-content .pagination {
-  margin: unset;
-}
-
-.islandora-solr-facet-wrapper {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #333333;
-}
-
-.islandora-solr-facet-wrapper:last-child {
-  border-bottom: unset;
-}
-
-.block ul.islandora-solr-facet {
-  padding: 0px;
-  list-style: none;
-}
-.block ul.islandora-solr-facet a {
-  text-decoration: none;
-}
-.block ul.islandora-solr-facet a:hover, .block ul.islandora-solr-facet a:focus {
-  text-decoration: underline;
-}
-
-.islandora-solr-facet li {
-  margin-top: 15px;
-}
-
-h3.facet-heading {
-  margin: 0;
-  padding-top: 15px;
-}
-
-.facet-heading a {
-  font-size: 1.4rem;
-  text-decoration: unset !important;
-}
-.facet-heading .facet-toggle:after {
-  /* symbol for "opening" panels */
-  font-family: "Glyphicons Halflings";
-  content: "−";
-  float: right;
-  color: grey;
-  font-size: 14px;
-  margin-top: 10px;
-}
-.facet-heading .facet-toggle.collapsed:after {
-  /* symbol for "collapsed" panels */
-  content: "+";
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-#islandora-metadata-legend:after {
-  font-family: "Glyphicons Halflings";
-  font-size: 1rem;
-  color: #333333;
-  content: "−";
-  display: inline-block;
-  margin-left: 10px;
-}
-
-#islandora-metadata-legend.collapsed:after {
-  content: "+";
-}
-
-#manuscript-viewer {
-  width: 100%;
-  display: table;
-  margin-bottom: 10px;
-}
-#manuscript-viewer #manuscript-viewer-transcript-pane {
-  float: left;
-  overflow: scroll;
-  margin-right: 20px;
-  max-height: 500px;
-  font-size: 12px;
-}
-#manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page {
-  display: none;
-}
-#manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page .active {
-  display: block;
-}
-#manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page pre {
-  font-size: 1.4em;
-}
-#manuscript-viewer #manuscript-viewer-osd-pane {
-  float: left;
-  width: 90%;
-}
-
-#BRpage {
-  min-width: 292px;
-}
-
-@media (max-width: 480px) {
-  .islandora-internet-archive-bookreader #BRnav {
-    height: 80px;
-  }
-  .islandora-internet-archive-bookreader #BRnav #BRpage {
-    float: none;
-    display: flex;
-  }
-  .islandora-internet-archive-bookreader #BRnav #BRnavpos {
-    margin-right: 0;
-  }
-
-  .BRnavCntl {
-    top: -30px;
-  }
-}
-#block-bc-islandora-bc-islandora-newspaper {
-  width: 100%;
-  margin: 0 auto;
-}
-
-#return-to-page {
-  margin-bottom: 5px;
-}
-
-.bulletin-calendar .inactive, .bulletin-calendar.inactive {
-  display: none;
-}
-.bulletin-calendar .active, .bulletin-calendar.active {
-  display: block;
-}
-.bulletin-calendar ul {
-  list-style-type: none;
-  margin-left: 0px;
-  padding-left: 0px;
-}
-.bulletin-calendar li {
-  display: inline-block;
-  margin: 0 10px 10px 0;
-}
-
-.yearbook-calendar .inactive, .yearbook-calendar.inactive {
-  display: none;
-}
-.yearbook-calendar .active, .yearbook-calendar.active {
-  display: block;
-}
-.yearbook-calendar ul {
-  list-style-type: none;
-  margin-left: 0px;
-  padding-left: 0px;
-}
-.yearbook-calendar li {
-  display: inline-block;
-  margin: 0 10px 10px 0;
-}
-
-#book-page-viewer {
-  margin-top: 10px;
-}
-
-#yearbook-nav span.year {
-  margin: 0 10px 10px 0;
-}
-#yearbook-nav .decade {
-  margin-left: 50px;
-  margin-bottom: 25px;
-}
-
-.islandora-basic-collection.student-pubs .islandora-basic-collection-object {
-  margin-left: 0;
-}
-
-/*# sourceMappingURL=_islandora.scss.map */
-#transcript-tab > div.tier-selector-processed.navigation-processed {
-  display: none;
-}
-
-ul#tabs-list > li {
-  display: none;
-}
-
-div#video-js-oh {
-  height: 200px !important;
-}
-
-.transcript-container {
-  height: unset;
-}
-
-html.js fieldset.collapsed .fieldset-wrapper {
-  display: unset;
-}
-
-.view-id-exhibition .exhibition-object .views-field-title,
-.view-id-exhibition .exhibition-object .views-field-body {
-  margin-bottom: 20px;
+.btn-group > .dropdown-toggle:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 html {
@@ -8875,6 +8230,675 @@ a.icon-after .glyphicon {
 .btn.icon-after .glyphicon {
   margin-left: 0.25em;
   margin-right: -0.25em;
+}
+
+.navbar-simple-search {
+  margin-top: 0.5em;
+  padding-left: 15px;
+}
+.navbar-simple-search .form-inline.form-group {
+  display: flex;
+}
+.navbar-simple-search .form-inline.form-group .form-group {
+  margin-bottom: 0;
+}
+.navbar-simple-search button.form-submit {
+  padding: 8px 12px;
+  margin-left: 5px;
+}
+.navbar-simple-search input#edit-islandora-simple-search-query {
+  max-width: 18em;
+  width: 100%;
+  height: 41px;
+}
+@media (min-width: 768px) {
+  .navbar-simple-search {
+    float: right;
+    margin-top: -0.5em;
+    padding-left: 0;
+  }
+  .navbar-simple-search .form-inline.form-group {
+    margin-bottom: -3em;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-simple-search input#edit-islandora-simple-search-query {
+    max-width: 20em;
+  }
+}
+
+.navbar-header {
+  float: none;
+}
+
+.navbar-default {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  background: #363644;
+  padding-bottom: 1em;
+}
+.navbar-default .navbar-brand {
+  font-size: 2.5rem;
+  color: #F5F2E5;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.1;
+  padding: 1rem 0 0.75rem;
+  padding-left: 15px;
+  display: block;
+  float: none;
+  height: auto;
+}
+.navbar-default .navbar-search-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-default .navbar-toggle {
+  height: 2.625em;
+  margin-left: 1em;
+}
+.navbar-default .navbar-collapse {
+  margin-left: 0;
+  margin-right: 0;
+}
+.navbar-default .navbar-nav {
+  float: none;
+  padding-right: 1.25em;
+  margin-bottom: 0;
+}
+.navbar-default .navbar-nav > li > a {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F5F2E5;
+  padding: 0.5em 0.625em;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #F1BDBB;
+}
+.navbar-default .navbar-nav .dropdown-menu > li > a {
+  padding: 0.5em 1.25em;
+}
+.navbar-default .secondary {
+  float: none;
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .navbar-default .dropdown-menu > li > a {
+    padding: 0.5em 0 0.5em 2em;
+    white-space: normal;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-default .navbar-search-menu {
+    display: inherit;
+  }
+  .navbar-default .navbar-nav > .first.leaf > a {
+    padding-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-default .navbar-nav > li > a {
+    padding: 0.5em 1.25em;
+  }
+}
+
+.navbar-btn {
+  display: none;
+}
+
+/**
+ * @FILE: Themes the front page and components: promoted image, promoted image info-box, frontpage info-panel;
+ *
+ * All variables are in _default_variables.scss.
+ */
+.frontpage-panel {
+  background: rgba(54, 54, 68, 0.85);
+  opacity: 1;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  color: #F5F2E5;
+  line-height: 1.4em;
+  margin-top: 1.5em;
+  padding: 1.25em;
+}
+.frontpage-panel input#edit-islandora-simple-search-query {
+  height: 41px;
+}
+.frontpage-panel .form-type-textfield {
+  margin-right: 5px;
+}
+.frontpage-panel .btn, .frontpage-panel .btn:active, .frontpage-panel .btn:visited, .frontpage-panel .btn:hover, .frontpage-panel .btn:focus {
+  padding: 8.5px 12px;
+}
+.frontpage-panel a {
+  margin: 0;
+}
+.frontpage-panel a:link, .frontpage-panel a:visited {
+  color: #F1BDBB;
+}
+.frontpage-panel a:hover, .frontpage-panel a:active {
+  color: #D9ABA9;
+}
+.frontpage-panel h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.frontpage-panel p {
+  margin: 0;
+}
+.frontpage-panel ul.links {
+  padding: 0;
+  margin-bottom: 0;
+}
+.frontpage-panel ul.links li {
+  display: inline;
+}
+.frontpage-panel #about-main, .frontpage-panel #frontpage-menu-mobile, .frontpage-panel #about-mobile, .frontpage-panel #edit-simple {
+  padding: 0;
+  margin-top: 20px;
+}
+.frontpage-panel #frontpage-menu-mobile, .frontpage-panel #about-mobile {
+  display: none;
+}
+@media (min-width: 480px) {
+  .frontpage-panel {
+    margin-top: 4em;
+    padding: 1.5em;
+  }
+  .frontpage-panel #edit-simple {
+    display: flex;
+  }
+  .frontpage-panel .form-type-textfield {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .frontpage-panel .form-inline .form-control {
+    width: 100%;
+  }
+}
+
+.front-footer {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+@media (max-height: 480px), (max-width: 480px) {
+  .front-footer {
+    position: relative;
+    bottom: 0;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+  }
+}
+
+#block-views-featured-block {
+  background: rgba(54, 54, 68, 0.85);
+  opacity: 1;
+  border-radius: 4px;
+  max-width: 300px;
+  float: right;
+  padding: 10px 15px;
+  color: #F5F2E5;
+}
+#block-views-featured-block a {
+  display: inline-block;
+  line-height: 1.75em;
+}
+#block-views-featured-block a:link, #block-views-featured-block a:visited {
+  color: #F1BDBB;
+}
+#block-views-featured-block a:hover, #block-views-featured-block a:active {
+  color: #D9ABA9;
+}
+
+/**
+ * @FILE: Responsible for Islandora collections LANDING page;
+ *
+ * All variables are in _default_variables.scss.
+ */
+.landingpage .panel-body {
+  padding: 0;
+}
+
+.landingpage h4 {
+  padding: 0;
+}
+
+.panel-footer.collections {
+  background-color: #363644;
+}
+.panel-footer.collections a:link, .panel-footer.collections a:visited {
+  color: #F5F2E5;
+}
+.panel-footer.collections a:hover, .panel-footer.collections a:active {
+  color: #F1BDBB;
+}
+.panel-footer.collections .lp-link {
+  text-decoration: none;
+}
+
+.collection-description {
+  background-color: #363644;
+  text-align: left;
+}
+.collection-description a:link, .collection-description a:visited {
+  color: #F5F2E5;
+}
+.collection-description a:hover, .collection-description a:active {
+  color: #F1BDBB;
+}
+.collection-description .lp-link {
+  text-decoration: none;
+}
+.collection-description h1 {
+  margin-top: 8.9em;
+  margin-bottom: 0;
+}
+
+.landingpage#collections {
+  text-align: left;
+  margin: 0;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.landingpage#collections > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.landingpage#collections .col-sm-6 {
+  min-width: 15em;
+  max-width: 25em;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .landingpage#collections .col-sm-6 {
+    margin-left: 0;
+  }
+}
+
+.landingpage-link {
+  width: 200px;
+}
+
+.landingpage-icon {
+  display: inline-block;
+  width: 220px;
+  background-size: 225px 225px !important;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.landingpage-icon a {
+  text-decoration: none;
+}
+.landingpage-icon a.lp-link {
+  display: block;
+  font-size: 0.95em;
+  padding: 0 2px 1px 2px;
+}
+.landingpage-icon h1 {
+  font-size: 1.26em;
+  margin-top: 8.9em;
+  margin-bottom: 0;
+}
+.landingpage-icon#photograph-collection {
+  background: url(/sites/all/modules/bc_islandora/img/photographs.jpg) no-repeat top left;
+}
+.landingpage-icon#newspaper-collection {
+  background: url(/sites/all/modules/bc_islandora/img/bulletin.jpg) no-repeat;
+}
+.landingpage-icon#yearbook-collection {
+  background: url(/sites/all/modules/bc_islandora/img/mortarboard.jpg) no-repeat;
+}
+.landingpage-icon#student-publication-collection {
+  background: url(/sites/all/modules/bc_islandora/img/studentpublications.jpg) no-repeat;
+}
+.landingpage-icon#barnard-center-for-research-on-women-collection {
+  background: url(/sites/all/modules/bc_islandora/img/bcrw.jpg) no-repeat;
+}
+.landingpage-icon#scrapbook-collection {
+  background: url(/sites/all/modules/bc_islandora/img/scrapbooks.jpg) no-repeat;
+}
+.landingpage-icon#barnard-magazine-collection {
+  background: url(/sites/all/modules/bc_islandora/img/barnardmagazine.jpg) no-repeat;
+}
+
+/**
+ * @FILE: Responsible for theming Islandora components.;
+ *
+ * All variables are in _default_variables.scss.
+ */
+h2.block-title {
+  font-size: 1.4rem;
+}
+
+.vjs-default-skin, .vjs-big-play-button, .video-js {
+  z-index: 1;
+}
+
+.socialmedia {
+  display: block;
+  margin: 20px 0;
+}
+.socialmedia a {
+  margin-right: 10px;
+}
+
+.breadcrumb {
+  margin-bottom: 15px;
+}
+.breadcrumb a {
+  text-decoration: none !important;
+}
+
+#dl-links {
+  margin-bottom: 10px;
+}
+
+.permalink {
+  clear: left;
+  margin-top: 25px;
+  width: 400px;
+}
+.permalink .permalink-wrapper {
+  display: inline;
+}
+.permalink .permalink-input {
+  margin-right: 3px;
+}
+.permalink label {
+  display: inline;
+  margin-right: 10px;
+}
+
+.islandora-openseadragon {
+  width: 85% !important;
+}
+
+.form-item.form-type-textfield.form-item-date-filter-date-filter-from {
+  display: inline-block;
+  margin: 1em 0;
+}
+
+.form-item.form-type-textfield.form-item-date-filter-date-filter-to {
+  display: inline-block;
+  margin: 1em 0;
+}
+
+.islandora-newspaper-issue-navigator {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.islandora-newspaper-object {
+  margin-top: 0 !important;
+}
+
+.islandora-metadata p {
+  margin: 0;
+}
+
+#islandora-solr-advanced-terms {
+  margin-bottom: 15px;
+}
+#islandora-solr-advanced-terms > div {
+  margin-bottom: 15px;
+}
+#islandora-solr-advanced-terms > div > div {
+  display: inline-block;
+}
+
+.region-content,
+.node-islandora-solr-content-type {
+  text-align: right;
+}
+.region-content > :not(#block-islandora-solr-display-switch),
+.region-content > :not(#block-bc-islandora-solr-sort-select),
+.node-islandora-solr-content-type > :not(#block-islandora-solr-display-switch),
+.node-islandora-solr-content-type > :not(#block-bc-islandora-solr-sort-select) {
+  text-align: left;
+}
+.region-content .field-type-text-long,
+.node-islandora-solr-content-type .field-type-text-long {
+  margin-bottom: 1em;
+}
+
+.islandora-solr-grid {
+  margin-top: 0;
+}
+
+#block-islandora-solr-display-switch {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 140%;
+  width: auto;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+#block-islandora-solr-display-switch ul {
+  list-style: none outside none;
+  margin-bottom: 0;
+  padding-inline-start: unset;
+}
+#block-islandora-solr-display-switch li {
+  display: inline;
+  border: rgba(54, 54, 68, 0.85) 1px;
+}
+#block-islandora-solr-display-switch li a {
+  padding: 6px 10px;
+  text-decoration: none;
+  background-color: rgba(54, 54, 68, 0.85);
+  color: #F5F2E5;
+}
+#block-islandora-solr-display-switch li a:hover {
+  color: #D9ABA9;
+}
+
+#block-bc-islandora-solr-sort-select {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+#islandora-solr-top {
+  text-align: center;
+}
+
+.islandora-solr-content .pagination {
+  margin: unset;
+}
+
+.islandora-solr-facet-wrapper {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333333;
+}
+
+.islandora-solr-facet-wrapper:last-child {
+  border-bottom: unset;
+}
+
+.block ul.islandora-solr-facet {
+  padding: 0px;
+  list-style: none;
+}
+.block ul.islandora-solr-facet a {
+  text-decoration: none;
+}
+.block ul.islandora-solr-facet a:hover, .block ul.islandora-solr-facet a:focus {
+  text-decoration: underline;
+}
+
+.islandora-solr-facet li {
+  margin-top: 15px;
+}
+
+h3.facet-heading {
+  margin: 0;
+  padding-top: 15px;
+}
+
+.facet-heading a {
+  font-size: 1.4rem;
+  text-decoration: unset !important;
+}
+.facet-heading .facet-toggle:after {
+  /* symbol for "opening" panels */
+  font-family: "Glyphicons Halflings";
+  content: "−";
+  float: right;
+  color: grey;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.facet-heading .facet-toggle.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "+";
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#islandora-metadata-legend:after {
+  font-family: "Glyphicons Halflings";
+  font-size: 1rem;
+  color: #333333;
+  content: "−";
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#islandora-metadata-legend.collapsed:after {
+  content: "+";
+}
+
+#manuscript-viewer {
+  width: 100%;
+  display: table;
+  margin-bottom: 10px;
+}
+#manuscript-viewer #manuscript-viewer-transcript-pane {
+  float: left;
+  overflow: scroll;
+  margin-right: 20px;
+  max-height: 500px;
+  font-size: 12px;
+}
+#manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page {
+  display: none;
+}
+#manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page .active {
+  display: block;
+}
+#manuscript-viewer #manuscript-viewer-transcript-pane .manuscript-transcript-page pre {
+  font-size: 1.4em;
+}
+#manuscript-viewer #manuscript-viewer-osd-pane {
+  float: left;
+  width: 90%;
+}
+
+#BRpage {
+  min-width: 292px;
+}
+
+@media (max-width: 480px) {
+  .islandora-internet-archive-bookreader #BRnav {
+    height: 80px;
+  }
+  .islandora-internet-archive-bookreader #BRnav #BRpage {
+    float: none;
+    display: flex;
+  }
+  .islandora-internet-archive-bookreader #BRnav #BRnavpos {
+    margin-right: 0;
+  }
+
+  .BRnavCntl {
+    top: -30px;
+  }
+}
+#block-bc-islandora-bc-islandora-newspaper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#return-to-page {
+  margin-bottom: 5px;
+}
+
+.bulletin-calendar .inactive, .bulletin-calendar.inactive {
+  display: none;
+}
+.bulletin-calendar .active, .bulletin-calendar.active {
+  display: block;
+}
+.bulletin-calendar ul {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.bulletin-calendar li {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+}
+
+.yearbook-calendar .inactive, .yearbook-calendar.inactive {
+  display: none;
+}
+.yearbook-calendar .active, .yearbook-calendar.active {
+  display: block;
+}
+.yearbook-calendar ul {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.yearbook-calendar li {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+}
+
+#book-page-viewer {
+  margin-top: 10px;
+}
+
+#yearbook-nav span.year {
+  margin: 0 10px 10px 0;
+}
+#yearbook-nav .decade {
+  margin-left: 50px;
+  margin-bottom: 25px;
+}
+
+.islandora-basic-collection.student-pubs .islandora-basic-collection-object {
+  margin-left: 0;
+}
+
+/*# sourceMappingURL=_islandora.scss.map */
+#transcript-tab > div.tier-selector-processed.navigation-processed {
+  display: none;
+}
+
+ul#tabs-list > li {
+  display: none;
+}
+
+div#video-js-oh {
+  height: 200px !important;
+}
+
+.transcript-container {
+  height: unset;
+}
+
+html.js fieldset.collapsed .fieldset-wrapper {
+  display: unset;
+}
+
+.view-id-exhibition .exhibition-object .views-field-title,
+.view-id-exhibition .exhibition-object .views-field-body {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
