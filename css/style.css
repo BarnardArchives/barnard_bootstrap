@@ -8232,6 +8232,41 @@ a.icon-after .glyphicon {
   margin-right: -0.25em;
 }
 
+#ex-themes a.theme {
+  color: #3D3D66;
+  border: none;
+  border-bottom: 1px solid #3D3D66;
+  padding: 0.75em 1.25em;
+  font-size: 1rem;
+}
+#ex-themes a.theme.active {
+  color: #3D3D66;
+  background-color: #F5F2E5;
+  border-bottom: 4px solid #3D3D66;
+  padding-bottom: 0.5625em;
+}
+#ex-themes a.theme:hover, #ex-themes a.theme:focus {
+  color: #54548C;
+  background-color: #F5F2E5;
+  border-bottom: 4px solid #54548C;
+  padding-bottom: 0.5625em;
+}
+#ex-themes .nav-tabs {
+  margin-bottom: 1em;
+}
+#ex-themes .nav-tabs.nav-justified > li > a {
+  border-radius: 0;
+}
+@media (min-width: 768px) {
+  #ex-themes .nav-tabs.nav-justified {
+    display: flex;
+  }
+  #ex-themes .nav-justified > li, #ex-themes .nav-tabs.nav-justified > li {
+    display: inherit;
+    width: auto;
+  }
+}
+
 .navbar-simple-search {
   margin-top: 0.5em;
   padding-left: 15px;

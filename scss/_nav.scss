@@ -1,3 +1,47 @@
+// Tabs
+#ex-themes {
+  a.theme {
+    color: $link-color;
+    border: none;
+    border-bottom: 1px solid $link-color;
+    padding: 0.75em 1.25em;
+    font-size: 1rem;
+
+    &.active {
+      color: $link-color;
+      background-color: $navbar-default-link-color;
+      border-bottom: 4px solid $link-color;
+      padding-bottom: 0.5625em;
+    }
+
+    &:hover, &:focus {
+      color: $link-hover-color;
+      background-color: $navbar-default-link-color;
+      border-bottom: 4px solid $link-hover-color;
+      padding-bottom: 0.5625em;
+    }
+  }
+
+  .nav-tabs {
+    margin-bottom: 1em;
+
+    &.nav-justified > li > a {
+      border-radius: 0;
+    }
+  }
+
+  // Override .nav-justified
+  @media (min-width: $screen-sm) {
+    .nav-tabs.nav-justified {
+      display: flex;
+    }
+    .nav-justified > li, .nav-tabs.nav-justified > li {
+      display: inherit;
+      width: auto;
+    }
+  }
+}
+
 // Search on Navbar
 .navbar-simple-search {
   margin-top: 0.5em;
