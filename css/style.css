@@ -8265,6 +8265,9 @@ a.icon-after .glyphicon {
     display: inherit;
     width: auto;
   }
+  #ex-themes .nav-justified > li a, #ex-themes .nav-tabs.nav-justified > li a {
+    border-radius: 4px 4px 0 0;
+  }
 }
 
 .navbar-simple-search {

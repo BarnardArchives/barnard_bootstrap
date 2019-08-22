@@ -38,6 +38,10 @@
     .nav-justified > li, .nav-tabs.nav-justified > li {
       display: inherit;
       width: auto;
+
+      a {
+        border-radius: 4px 4px 0 0;
+      }
     }
   }
 }
