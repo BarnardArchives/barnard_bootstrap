@@ -8838,6 +8838,8 @@ h3.facet-heading {
 
 #BRpage {
   min-width: 292px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 480px) {
@@ -8846,10 +8848,10 @@ h3.facet-heading {
   }
   .islandora-internet-archive-bookreader #BRnav #BRpage {
     float: none;
-    display: flex;
+    justify-content: inherit;
   }
   .islandora-internet-archive-bookreader #BRnav #BRnavpos {
-    margin-right: 0;
+    margin-right: 0 !important;
   }
 
   .BRnavCntl {

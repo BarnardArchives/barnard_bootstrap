@@ -264,6 +264,8 @@ h3.facet-heading {
 // Book page nav
 #BRpage {
   min-width: 292px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: $screen-xs) {
@@ -272,10 +274,11 @@ h3.facet-heading {
 
     #BRpage {
       float: none;
-      display: flex;
+      justify-content: inherit;
     }
     #BRnavpos {
-      margin-right: 0;
+      // Override inline styles
+      margin-right: 0 !important;
     }
   }
   .BRnavCntl {
