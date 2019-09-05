@@ -8538,7 +8538,7 @@ a.icon-after .glyphicon {
 .landingpage#collections {
   text-align: left;
   margin: 0;
-  max-width: 860px;
+  max-width: none;
   margin: 0 auto;
 }
 .landingpage#collections > div {
@@ -8553,7 +8553,7 @@ a.icon-after .glyphicon {
 }
 @media (min-width: 768px) {
   .landingpage#collections .col-sm-6 {
-    margin-left: 0;
+    margin-left: -1%;
   }
 }
 
