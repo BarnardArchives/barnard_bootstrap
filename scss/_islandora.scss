@@ -101,12 +101,12 @@ h2.block-title {
 
 .region-content,
 .node-islandora-solr-content-type {
-  text-align: right;
+  text-align: left;
 
-  > :not(#block-islandora-solr-display-switch),
-  > :not(#block-bc-islandora-solr-sort-select) {
-    text-align: left;
-  }
+  // > :not(#block-islandora-solr-display-switch),
+  // > :not(#block-bc-islandora-solr-sort-select) {
+  //   text-align: left;
+  // }
 
   .field-type-text-long {
     margin-bottom: 1em;
