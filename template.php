@@ -44,6 +44,9 @@ function barnard_bootstrap_preprocess_page(&$vars) {
   // If we have bc_islandora, this is NOT the front page, and this is not a
   // search result page, call bc_islandora's custom breadcrumb theming method
   // and set $vars['bc_breadcrumb'].
+
+  /*
+  // As of 2019-SEP we have DISABLED breadcrumbs.
   if (isset($node) && $node->type == 'islandora_solr_content_type') {
     $vars['bc_breadcrumb'] = theme('bc_islandora_breadcrumb', ['breadcrumb' => menu_get_active_breadcrumb()]);
   }
@@ -52,6 +55,8 @@ function barnard_bootstrap_preprocess_page(&$vars) {
       $vars['bc_breadcrumb'] = theme('bc_islandora_breadcrumb', ['breadcrumb' => []]);
     }
   }
+  */
+  
   // If we have service_links, set $vars['socialmedia'].
   //  if (module_exists('service_links') && _service_links_match_path()) {
   //    $vars['socialmedia'] = implode('', service_links_render(NULL));
