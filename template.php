@@ -73,6 +73,20 @@ function barnard_bootstrap_preprocess_page(&$vars) {
  * Implements hook_form_FORM_ID_alter().
  */
 function barnard_bootstrap_form_islandora_solr_advanced_search_form_alter(&$form, &$form_state, $form_id) {
+  $sort_order = array(0,1,2,4,3,5,6);
+
+  $form['terms'][0]['search']['#attributes']['placeholder'] = "Search in this collection";
+
+//  if ($form['terms'][0]['search']['#default_value'] === ' ' || $form['terms'][0]['search']['#default_value'] === "*") {
+//// NULL the term. Doing this breaks everything. WHYYYYYY?
+//  }
+
+  foreach ($form['terms'] as $key => &$value) {
+    if (!is_array($value)) { continue; }
+    unset($value['search']['#title'], $value['field']['#title']);
+    array_multisort($sort_order, $value);
+  }
+
   $form['controls']['submit']['#value'] = "Apply";
 }
 

@@ -31,4 +31,16 @@
     }
   };
 
+  Drupal.behaviors.solrSearchClearBlankSearch = {
+    attach: function (context, settings) {
+
+      const fieldZero = $('#edit-terms-0-search');
+
+      if (!fieldZero.length) return;
+
+      if (fieldZero.val() === ' ') fieldZero.val('');
+    }
+  };
+
+  //
 })( jQuery );
