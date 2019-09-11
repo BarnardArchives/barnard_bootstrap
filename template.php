@@ -56,7 +56,7 @@ function barnard_bootstrap_preprocess_page(&$vars) {
     }
   }
   */
-  
+
   // If we have service_links, set $vars['socialmedia'].
   //  if (module_exists('service_links') && _service_links_match_path()) {
   //    $vars['socialmedia'] = implode('', service_links_render(NULL));

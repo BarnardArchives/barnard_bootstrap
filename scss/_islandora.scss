@@ -101,12 +101,12 @@ h2.block-title {
 
 .region-content,
 .node-islandora-solr-content-type {
-  text-align: left;
+  text-align: right;
 
-  // > :not(#block-islandora-solr-display-switch),
-  // > :not(#block-bc-islandora-solr-sort-select) {
-  //   text-align: left;
-  // }
+  > :not(#block-islandora-solr-display-switch),
+  > :not(#block-bc-islandora-solr-sort-select) {
+    text-align: left;
+  }
 
   .field-type-text-long {
     margin-bottom: 1em;
@@ -165,6 +165,11 @@ h2.block-title {
 }
 
 .islandora-solr-facet-wrapper {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333333;
+}
+
+#block-islandora-solr-advanced {
   padding-bottom: 15px;
   border-bottom: 1px solid #333333;
 }
