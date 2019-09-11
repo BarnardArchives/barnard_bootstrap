@@ -68,6 +68,15 @@ function barnard_bootstrap_preprocess_page(&$vars) {
   }
 }
 
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function barnard_bootstrap_form_islandora_solr_advanced_search_form_alter(&$form, &$form_state, $form_id) {
+  kpr($form);
+  $form['controls']['submit']['#value'] = "Apply";
+}
+
 /**
  * Implements hook_form_FORM_ID_alter().
  */
