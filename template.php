@@ -44,6 +44,9 @@ function barnard_bootstrap_preprocess_page(&$vars) {
   // If we have bc_islandora, this is NOT the front page, and this is not a
   // search result page, call bc_islandora's custom breadcrumb theming method
   // and set $vars['bc_breadcrumb'].
+
+  /*
+  // As of 2019-SEP we have DISABLED breadcrumbs.
   if (isset($node) && $node->type == 'islandora_solr_content_type') {
     $vars['bc_breadcrumb'] = theme('bc_islandora_breadcrumb', ['breadcrumb' => menu_get_active_breadcrumb()]);
   }
@@ -52,6 +55,8 @@ function barnard_bootstrap_preprocess_page(&$vars) {
       $vars['bc_breadcrumb'] = theme('bc_islandora_breadcrumb', ['breadcrumb' => []]);
     }
   }
+  */
+
   // If we have service_links, set $vars['socialmedia'].
   //  if (module_exists('service_links') && _service_links_match_path()) {
   //    $vars['socialmedia'] = implode('', service_links_render(NULL));
@@ -61,6 +66,28 @@ function barnard_bootstrap_preprocess_page(&$vars) {
     drupal_add_js(['permalink_path' => $_GET['q']], 'setting');
     drupal_add_js(drupal_get_path('theme', 'barnard_bootstrap') . '/js/permalink.js');
   }
+}
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function barnard_bootstrap_form_islandora_solr_advanced_search_form_alter(&$form, &$form_state, $form_id) {
+  $sort_order = array(0,1,2,4,3,5,6);
+
+  $form['terms'][0]['search']['#attributes']['placeholder'] = "Search in this collection";
+
+//  if ($form['terms'][0]['search']['#default_value'] === ' ' || $form['terms'][0]['search']['#default_value'] === "*") {
+//// NULL the term. Doing this breaks everything. WHYYYYYY?
+//  }
+
+  foreach ($form['terms'] as $key => &$value) {
+    if (!is_array($value)) { continue; }
+    unset($value['search']['#title'], $value['field']['#title']);
+    array_multisort($sort_order, $value);
+  }
+
+  $form['controls']['submit']['#value'] = "Apply";
 }
 
 /**
