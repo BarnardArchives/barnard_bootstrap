@@ -16,7 +16,7 @@
       if (typeof settings.islandoraSolrContent !== 'undefined' &&
           settings.islandoraSolrContent.userSearch === false) return;
 
-      if (!islandoraResultCount.length && !pageHeading.length) return;
+      if (!islandoraResultCount.length) return;
 
       pageHeading.once('solr-result-title',
           function () {
@@ -26,6 +26,10 @@
                   text: resultCount,
                   style: 'font-weight: 900', // this should be removed and done in CSS. -BR
                 }).append(" ");
+            if (typeof settings.islandoraSolrContent !== 'undefined' &&
+                settings.islandoraSolrContent.userSearch === true) {
+              pageHeading.prepend("results in ");
+            }
             pageHeading.prepend(spanResultCount);
           });
     }
