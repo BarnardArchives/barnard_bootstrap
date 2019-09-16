@@ -66,7 +66,7 @@
     </div>
   <?php endif; ?>
 
-
+<?php /*
 <div class="views-row views-row-3 exhibition-object">
 	<div class="media">
 	  <div class="media-left">
@@ -81,8 +81,7 @@
 	  </div>
 	</div>
 </div>
-
-
+*/ ?>
   <?php if ($attachment_after): ?>
     <div class="attachment attachment-after">
       <?php print $attachment_after; ?>
