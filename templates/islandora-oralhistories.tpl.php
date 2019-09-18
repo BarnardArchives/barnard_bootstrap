@@ -25,8 +25,12 @@
     </p>
 <?php endif; ?>
 <div class="islandora-oralhistories-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="VideoObject">
-  <div class="islandora-oralhistories-content-wrapper  clearfix">
-    <?php print $metadata; ?>
+  <div class="islandora-oralhistories-content-wrapper clearfix">
+    <div class="islandora-oralhistories-metadata" id="top">
+      <?php print $description; ?>
+
+      <?php print $metadata; ?>
+    </div>
     <?php if ($islandora_content['viewer']): ?>
       <div class="islandora-oralhistories-content">
         <?php print $islandora_content['viewer']; ?>
@@ -34,7 +38,6 @@
     <?php endif; ?>
   </div>
   <div class="islandora-oralhistories-metadata">
-    <?php print $description; ?>
     <?php if ($parent_collections): ?>
       <div>
         <h2><?php print t('In collections'); ?></h2>
