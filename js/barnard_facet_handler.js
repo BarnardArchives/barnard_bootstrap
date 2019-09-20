@@ -3,22 +3,21 @@
 */
 'use strict';
 
-// (function ($) { }
+(function ($) {
+  Drupal.behaviors.barnardIslandoraFacets = {
+    attach: function (context, settings) {
+      let crumbs = $('ol.breadcrumb');
 
-// THIS IS A STUB.
-$ = jQuery;
-var crumbs = $('ol.breadcrumb')
+      if (!crumbs.length) return;
 
-// ditch if can't find
-if (!crumbs.length) {
-  return;
-}
-// parse parts
-var facets = crumbs.find('li')
+      let facets = crumbs.find('li');
 
-// handle hiding of facets.
-if (facets.length <= 1)
-  crumbs.hide();
-else {
-  $(facets[0]).hide();
-}
+      if (facets.length <= 1) {
+        crumbs.hide();
+      } else {
+        $(facets[0]).remove();
+      }
+
+    }
+  };
+})( jQuery );
