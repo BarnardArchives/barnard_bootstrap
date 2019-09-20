@@ -20,7 +20,7 @@
 
       pageHeading.once('solr-result-title',
           function () {
-            const resultCount = islandoraResultCount.text().match(/.*of.((\d{1,3})(,\d{3}))/i)[1],
+            const resultCount = islandoraResultCount.text().match(/.*of.((\d{1,3})(,\d{3})?)/i)[1],
                 spanResultCount = $('<span />', {
                   id: 'title-bound-solr-result-count',
                   text: resultCount,
