@@ -56,7 +56,7 @@
 .landingpage#collections {
   text-align: left;
   margin: 0;
-  max-width: 860px; //consider updating to max-width: none; now that titles use larger font-size
+  max-width: none;
   margin: 0 auto;
 
   > div {
@@ -72,7 +72,7 @@
 
     // not small screens
     @media (min-width: $screen-sm) {
-      margin-left: 0;
+      margin-left: -1%;
     }
   }
 }
