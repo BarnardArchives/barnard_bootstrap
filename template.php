@@ -73,7 +73,7 @@ function barnard_bootstrap_preprocess_page(&$vars) {
  * Implements hook_form_FORM_ID_alter().
  */
 function barnard_bootstrap_form_islandora_solr_advanced_search_form_alter(&$form, &$form_state, $form_id) {
-  $sort_order = array(0,1,2,4,3,5,6);
+  $sort_order = array(0,1,2,4,3,5,6); // Genius or lazy
 
   $form['terms'][0]['search']['#attributes']['placeholder'] = "Search in this collection";
 
@@ -114,7 +114,7 @@ function barnard_bootstrap_form_islandora_solr_range_slider_form_alter(&$form, &
   if ($disable_slider) {
     $form['markup']['#access'] = !$disable_slider;
     $form['range_slider_submit']['#access'] = !$disable_slider;
-    drupal_add_js(drupal_get_path('theme', 'barnard_bootstrap') . '/js/date_slider.js', 
+    drupal_add_js(drupal_get_path('theme', 'barnard_bootstrap') . '/js/date_slider.js',
       array(
         'type' => 'file',
         'weight' => 5,
@@ -130,6 +130,7 @@ function barnard_bootstrap_form_islandora_solr_simple_search_form_alter(&$form, 
   unset($form['simple']['islandora_simple_search_query']['#size']);
   // Add placeholder text.
   $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = "Search everything by name, keyword, etc.";
+  $form['simple']['islandora_simple_search_query']['#suffix'] = '<div class="element-invisible"><label for="edit-islandora-simple-search-query">Search</label></div>';
 }
 
 /**
@@ -152,6 +153,7 @@ function barnard_bootstrap_block_view_islandora_solr_display_switch_alter(&$data
  *   - content: A string containing the content being wrapped.
  *
  * @ingroup themeable
+ * @return string => HTML markup.
  */
 function barnard_bootstrap_islandora_solr_facet_wrapper($variables) {
   $output = '<div class="islandora-solr-facet-wrapper">';
@@ -167,6 +169,7 @@ function barnard_bootstrap_islandora_solr_facet_wrapper($variables) {
 }
 
 // ->>> Old Below:
+/** @noinspection DuplicatedCode */
 
 /**
  * Exception.
@@ -176,6 +179,7 @@ function barnard_bootstrap_islandora_solr_facet_wrapper($variables) {
  *
  * @return string mode
  *   IAB mode.
+ *
  */
 function _barnard_bootstrap_breadcrumb_view_exceptions($pid) {
   $thumbs = explode(', ', variable_get('bc_islandora_bookreader_initial_thumbs'));
@@ -190,11 +194,13 @@ function _barnard_bootstrap_breadcrumb_view_exceptions($pid) {
   return '2up';
 }
 
-
+/**  **/
 
 /**
  * Implements hook_preprocess_islandora_basic_collection_wrapper().
- */
+ *
+ * @noinspection DuplicatedCode PhpUnused
+*/
 function barnard_bootstrap_preprocess_islandora_basic_collection_wrapper(&$vars) {
   $object = $vars['islandora_object'];
   if (isset($object['MODS']) && $mods = simplexml_load_string($object['MODS']->getContent(NULL))) {
@@ -213,6 +219,8 @@ function barnard_bootstrap_preprocess_islandora_basic_collection_wrapper(&$vars)
 
 /**
  * Implements hook_preprocess_islandora_book_book().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_preprocess_islandora_book_book(&$vars) {
   // Barnard Core Module.
@@ -229,6 +237,8 @@ function barnard_bootstrap_preprocess_islandora_book_book(&$vars) {
 
 /**
  * Implements hook_preprocess_islandora_book_page().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_preprocess_islandora_book_page(&$vars) {
   // Barnard Core Module.
@@ -243,6 +253,8 @@ function barnard_bootstrap_preprocess_islandora_book_page(&$vars) {
 
 /**
  * Implements hook_preprocess_islandora_large_image().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_preprocess_islandora_large_image(&$vars) {
   // Barnard Core Module.
@@ -256,6 +268,8 @@ function barnard_bootstrap_preprocess_islandora_large_image(&$vars) {
 
 /**
  * Implements hook_preprocess_islandora_book_book().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_preprocess_islandora_oralhistories(&$vars) {
   // Barnard Core Module.
@@ -271,6 +285,8 @@ function barnard_bootstrap_preprocess_islandora_oralhistories(&$vars) {
 
 /**
  * Implements hook_preprocess_islandora_manuscript_manuscript().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_preprocess_islandora_manuscript_manuscript(&$vars) {
   module_load_include('inc', 'islandora_paged_content', 'includes/utilities');
@@ -315,6 +331,8 @@ function barnard_bootstrap_preprocess_islandora_manuscript_manuscript(&$vars) {
 
 /**
  * Implements hook_preprocess_islandora_manuscript_page().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_preprocess_islandora_manuscript_page(&$vars) {
   module_load_include('inc', 'islandora_paged_content', 'includes/utilities');
@@ -337,6 +355,8 @@ function barnard_bootstrap_preprocess_islandora_manuscript_page(&$vars) {
  *
  * Replaces the url for the search result to be the book's url, not the page.
  * The page is added as a fragment at the end of the book url.
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_islandora_compoundcmodel_islandora_solr_object_result_alter(&$search_results, $query_processor) {
   $parent_book_field_name = variable_get('islandora_book_parent_book_solr_field', 'RELS_EXT_isMemberOf_uri_ms');
@@ -370,6 +390,8 @@ function barnard_bootstrap_islandora_compoundcmodel_islandora_solr_object_result
 
 /**
  * Implements hook_CMODEL_PID_islandora_solr_object_result_alter().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_islandora_manuscriptpagecmodel_islandora_solr_object_result_alter(&$search_results, $query_processor) {
   $search_results['object_url_params']['solr'] = [
@@ -380,6 +402,8 @@ function barnard_bootstrap_islandora_manuscriptpagecmodel_islandora_solr_object_
 
 /**
  * Implements hook_CMODEL_PID_islandora_solr_object_result_alter().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_islandora_newspaperpagecmodel_islandora_solr_object_result_alter(&$search_results, $query_processor) {
   $field_match = [
@@ -411,6 +435,8 @@ function barnard_bootstrap_islandora_newspaperpagecmodel_islandora_solr_object_r
  *
  * Add page viewing fragment and search term to show all search results within
  * book on page load.
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_islandora_bookcmodel_islandora_solr_object_result_alter(&$search_results, $query_processor) {
   $parent_book_field_name = variable_get('islandora_book_parent_book_solr_field', 'RELS_EXT_isMemberOf_uri_ms');
@@ -448,6 +474,8 @@ function barnard_bootstrap_islandora_bookcmodel_islandora_solr_object_result_alt
  *
  * Replaces the url for the search result to be the book's url, not the page.
  * The page is added as a fragment at the end of the book url.
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_islandora_pagecmodel_islandora_solr_object_result_alter(&$search_results, $query_processor) {
   $parent_book_field_name = variable_get('islandora_book_parent_book_solr_field', 'RELS_EXT_isMemberOf_uri_ms');
@@ -507,6 +535,8 @@ function barnard_bootstrap_islandora_pagecmodel_islandora_solr_object_result_alt
 
 /**
  * Implements hook_CMODEL_PID_islandora_solr_object_result_alter().
+ *
+ * @noinspection DuplicatedCode PhpUnused
  */
 function barnard_bootstrap_islandora_sp_large_image_cmodel_islandora_solr_object_result_alter(&$search_results, $query_processor) {
   $search_results['object_url_params']['solr'] = [
