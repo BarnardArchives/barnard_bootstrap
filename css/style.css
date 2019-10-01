@@ -6372,6 +6372,9 @@ h3.facet-heading {
 .islandora-basic-collection.student-pubs .islandora-basic-collection-object {
   margin-left: 0; }
 
+.field.field-name-isct-featured-content-area {
+  text-align: unset !important; }
+
 /*# sourceMappingURL=_islandora.scss.map */
 #transcript-tab > div.tier-selector-processed.navigation-processed {
   display: none; }
