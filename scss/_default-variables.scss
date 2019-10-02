@@ -31,6 +31,8 @@ $font-size-h6: ($rem-font-size-base * 1.25);
 $headings-font-family: Georgia, "Times New Roman", Times, serif;
 
 // Navbar links
+$zindex-navbar: 699;
+
 $navbar-default-link-color:                #F5F2E5;
 $navbar-default-link-hover-color:          #F1BDBB;
 // $navbar-default-link-hover-bg:             transparent !default;
