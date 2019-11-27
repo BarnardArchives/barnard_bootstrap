@@ -6391,4 +6391,7 @@ div#video-js-oh {
 html.js fieldset.collapsed .fieldset-wrapper {
   display: unset; }
 
+.vjs-captions.vjs-text-track {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */
