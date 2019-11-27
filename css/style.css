@@ -6392,6 +6392,6 @@ html.js fieldset.collapsed .fieldset-wrapper {
   display: unset; }
 
 .vjs-captions.vjs-text-track {
-  display: none; }
+  display: none !important; }
 
 /*# sourceMappingURL=style.css.map */
