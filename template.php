@@ -279,8 +279,12 @@ function barnard_bootstrap_preprocess_islandora_oralhistories(&$vars) {
   module_load_include('inc', 'bc_islandora', 'includes/theme');
   $object = $vars['object'];
 
+  $ds_required = isset($object['TRANSCRIPT']) ? ['TRANSCRIPT'] : ['UNCORRECTED_TRANSCRIPT'];
+  //  $ds_required = ['TRANSCRIPT', 'UNCORRECTED_TRANSCRIPT']; // FOR REVIEW
+  $ds_required[] = ('OBJ');
+
   // Provide a link to this object's transcript datastream via $vars['dl_links'].
-  $vars['dl_links'] = _barnard_islandora_dl_links($object, ['TRANSCRIPT']);
+  $vars['dl_links'] = _barnard_islandora_dl_links($object, $ds_required);
 }
 
 /**
